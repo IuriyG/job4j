@@ -7,7 +7,7 @@ public class Check {
             if (data[0] != tmp) {
                 result = false;
                 break;
-            } else result = data[0];
+            }
         }
         return result;
     }
