@@ -18,7 +18,6 @@ public class MinDiapasonTest {
 
     @Test
     public void whenMiddleMin() {
-        assertThat(MinDiapason.findMin(new int[]{10, 2, 5, 1}, 0, 2), is(2)
-        );
+        assertThat(MinDiapason.findMin(new int[]{10, 2, 5, 1}, 0, 2), is(2));
     }
 }
