@@ -6,13 +6,16 @@ public class PrimeNumber {
         boolean number;
         for (int i = 2; i <= finish; i++) {
             number = true;
-            for (int j = 2; j <= i / j; j++)
+            for (int j = 2; j <= i / j; j++) {
                 if (i % j == 0) {
                     number = false;
                     break;
                 }
+            }
 
-            if (number) count++;
+            if (number) {
+                count++;
+            }
         }
         return count;
     }
