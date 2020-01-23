@@ -12,7 +12,6 @@ public class PrimeNumber {
                     break;
                 }
             }
-
             if (number) {
                 count++;
             }
