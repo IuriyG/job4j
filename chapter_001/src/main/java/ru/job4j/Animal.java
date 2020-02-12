@@ -1,22 +1,30 @@
 package ru.job4j;
 
 public class Animal {
+    String name;
 
     public Animal() {
-        System.out.println(Animal.class);
+    }
+
+    public Animal(String name) {
+        this.name = name;
     }
 }
 
 class Predator extends Animal {
     public Predator() {
-        super();
-        System.out.println(Predator.class);
+    }
+
+    public Predator(String name) {
+        super(name);
     }
 }
 
 class Tiger extends Predator {
     public Tiger() {
-        super();
-        System.out.println(Tiger.class);
+    }
+
+    public Tiger(String name) {
+        super(name);
     }
 }
