@@ -6,6 +6,6 @@ public class College {
         student.setFullName("George Tramp");
         student.setGroup(12);
         student.setReceiptDate("01.09.2004");
-        System.out.println("Full name: " + student.getFullName() + "\n" + "Number of group: " + student.getGroup() + "\n" + "Receipt date: " + student.getReceiptDate());
+        System.out.println("Full name: " + student.getFullName() + System.lineSeparator() + "Number of group: " + student.getGroup() + System.lineSeparator() + "Receipt date: " + student.getReceiptDate());
     }
 }
