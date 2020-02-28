@@ -23,10 +23,10 @@ public class Tracker {
     /**
      * Указатель ячейки для новой заявки.
      */
-    private int position = 0;
+    private int size = 0;
 
-    public int getPosition() {
-        return position;
+    public int getSize() {
+        return size;
     }
 
     /**
@@ -36,7 +36,7 @@ public class Tracker {
      */
     public Item add(Item item) {
         item.setId(this.generateId());
-        items[this.position++] = item;
+        items[this.size++] = item;
         return item;
     }
 
@@ -53,21 +53,23 @@ public class Tracker {
 
     /**
      * Метод возвращает копию массива без null элементов.
-     *
+     * В мыссиве не будет пустых элементов, поэтому сократили код.
      * @return готовый массив.
      */
     public Item[] findAll() {
-        Item[] outItem = new Item[this.items.length];
-        int size = 0;
-        for (int i = 0; i < getPosition(); i++) {
-            Item a = this.items[i];
-            if (a.getName() != null) {
-                outItem[size] = a;
-                size++;
-            }
-        }
-        this.items = Arrays.copyOf(outItem, size);
-        return this.items;
+        /** Item[] outItem = new Item[this.items.length];
+         int size = 0;
+         for (int i = 0; i < getPosition(); i++) {
+         Item a = this.items[i];
+         if (a.getName() != null) {
+         outItem[size] = a;
+         size++;
+         }
+         }
+         this.items = Arrays.copyOf(outItem, size);
+         return this.items;
+         */
+        return Arrays.copyOf(items, size);
     }
 
     /**
@@ -79,7 +81,7 @@ public class Tracker {
     public Item[] findByName(String key) {
         Item[] outItem = new Item[this.items.length];
         int size = 0;
-        for (int i = 0; i < getPosition(); i++) {
+        for (int i = 0; i < getSize(); i++) {
             Item b = this.items[i];
             if (b.getName() != null && b.getName().equals(key)) {
                 outItem[size] = b;
@@ -99,7 +101,7 @@ public class Tracker {
      */
     public Item findById(String id) {
         Item result = null;
-        for (int i = 0; i < getPosition(); i++) {
+        for (int i = 0; i < getSize(); i++) {
             if (items[i].getId().equals(id)) {
                 result = items[i];
                 break;

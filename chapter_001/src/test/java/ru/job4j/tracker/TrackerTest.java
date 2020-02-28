@@ -25,10 +25,8 @@ public class TrackerTest {
     public void whenFindAllReturnCopyArrayWithoutNull() {
         Tracker tracker = new Tracker();
         Item one = tracker.add(new Item("test1"));
-        Item two = tracker.add(new Item(null));
         Item three = tracker.add(new Item("test2"));
         Item four = tracker.add(new Item("test3"));
-        Item five = tracker.add(new Item(null));
         Item[] items = new Item[]{one, three, four};
         assertThat(tracker.findAll(), is(items));
     }
