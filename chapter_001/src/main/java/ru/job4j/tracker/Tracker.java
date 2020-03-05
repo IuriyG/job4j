@@ -54,6 +54,7 @@ public class Tracker {
     /**
      * Метод возвращает копию массива без null элементов.
      * В мыссиве не будет пустых элементов, поэтому сократили код.
+     *
      * @return готовый массив.
      */
     public Item[] findAll() {
@@ -69,7 +70,7 @@ public class Tracker {
          this.items = Arrays.copyOf(outItem, size);
          return this.items;
          */
-        return Arrays.copyOf(items, size);
+        return Arrays.copyOf(items, getSize());
     }
 
     /**
@@ -79,7 +80,7 @@ public class Tracker {
      * @return возвращает массив.
      */
     public Item[] findByName(String key) {
-        Item[] outItem = new Item[this.items.length];
+        Item[] outItem = new Item[getSize()];
         int size = 0;
         for (int i = 0; i < getSize(); i++) {
             Item b = this.items[i];
@@ -88,8 +89,7 @@ public class Tracker {
                 size++;
             }
         }
-        items = Arrays.copyOf(outItem, size);
-        return items;
+        return Arrays.copyOf(outItem, size);
     }
 
     /**
@@ -102,8 +102,47 @@ public class Tracker {
     public Item findById(String id) {
         Item result = null;
         for (int i = 0; i < getSize(); i++) {
-            if (items[i].getId().equals(id)) {
+            if (this.items[i] != null && this.items[i].getId().equals(id)) {
                 result = items[i];
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Метод удаляет значение в массиве соответствующее входящему аргументу и возвращает массив с null ссылкой вместо элемента.
+     *
+     * @param id входящий аргумент.
+     * @return заканчивает цикл.
+     */
+    public boolean deleteItem(String id) {
+        boolean result = false;
+        for (int i = 0; i < items.length; i++) {
+            if (items[i] != null && items[i].getId().equals(id)) {
+                items[i] = null;
+                System.arraycopy(items, i + 1, this.items, i, items.length - 1 - i);
+                result = true;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Метод заменяет элемент в массиве, соответствующий входящему аргументу id, на новый элемент входящего аргументв newItem.
+     *
+     * @param id      входящий аргумент.
+     * @param newItem входящий аргумент.
+     * @return оканчивает цикл.
+     */
+    public boolean replace(String id, Item newItem) {
+        boolean result = false;
+        for (int i = 0; i < getSize(); i++) {
+            Item a = this.items[i];
+            if (a.getId().equals(id)) {
+                items[i] = newItem;
+                result = true;
                 break;
             }
         }
