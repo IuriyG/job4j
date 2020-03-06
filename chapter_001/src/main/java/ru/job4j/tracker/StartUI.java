@@ -22,7 +22,6 @@ public class StartUI {
                 String name = scanner.nextLine();
                 Item item = new Item(name);
                 tracker.add(item);
-
             } else if (select == 1) {
                 tracker.findAll();
                 System.out.println(System.lineSeparator() + "=== Your Item ===");
@@ -35,21 +34,22 @@ public class StartUI {
                 System.out.println(System.lineSeparator() + "=== Edit item ===");
                 System.out.print("Enter Id: ");
                 String id = scanner.nextLine();
-                System.out.print("Enter new name of Item: ");
-                String name = scanner.nextLine();
-                Item item = new Item(name);
-                if (tracker.replace(id, tracker.add(item))) {
+                Item item = new Item(null);
+                item.setId(id);
+                if (tracker.replace(id, (item))) {
                     System.out.println("Item replace successfully!");
-                } else System.out.println("Invalid Id try again.");
-
+                } else {
+                    System.out.println("Invalid Id try again.");
+                }
             } else if (select == 3) {
                 System.out.println(System.lineSeparator() + "=== Delete Item ===");
                 System.out.print("Enter Id: ");
                 String id = scanner.nextLine();
                 if (tracker.deleteItem(id)) {
                     System.out.println("Item deleted successfully!");
-                } else System.out.println("Invalid Id try again.");
-
+                } else {
+                    System.out.println("Invalid Id try again.");
+                }
             } else if (select == 4) {
                 System.out.println(System.lineSeparator() + "=== Find items by Id ===");
                 System.out.print("Enter Id: ");
@@ -60,7 +60,12 @@ public class StartUI {
                 System.out.print("Enter name: ");
                 String name = scanner.nextLine();
                 Item[] findByName = tracker.findByName(name);
-                System.out.println(System.lineSeparator() + "Find matches: " + findByName.length);
+                System.out.println(System.lineSeparator() + "Find matches: ");
+                int number = 1;
+                for (Item findName : findByName) {
+                    System.out.println("№" + number + " Item: " + findName);
+                    number++;
+                }
             } else if (select == 6) {
                 run = false;
                 System.out.println(System.lineSeparator() + "Exit program");
