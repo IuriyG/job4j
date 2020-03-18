@@ -28,9 +28,10 @@ public class StartUI {
     public static void replaceItem(Input input, Tracker tracker) {
         System.out.println(System.lineSeparator() + "=== Edit item ===");
         String id = input.askStr("Enter Id: ");
-        Item item = new Item(null);
+        String name = input.askStr("Enter a new name of item: ");
+        Item item = new Item(name);
         item.setId(id);
-        if (tracker.replace(id, (item))) {
+        if (tracker.replace(id, item)) {
             System.out.println("Item replace successfully!");
         } else {
             System.out.println("Invalid Id try again.");
@@ -85,6 +86,14 @@ public class StartUI {
             } else if (select == 6) {
                 run = false;
                 System.out.println(System.lineSeparator() + "Exit program");
+            } else if (select == 7) {
+                tracker.findAll();
+                System.out.println(System.lineSeparator() + "=== Your Item ===");
+                int number = 1;
+                for (Item itm : tracker.findAll()) {
+                    System.out.println("№" + number + " Item: " + itm.getId());
+                    number++;
+                }
             }
             System.out.println();
         }
