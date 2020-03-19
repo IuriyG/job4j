@@ -86,14 +86,6 @@ public class StartUI {
             } else if (select == 6) {
                 run = false;
                 System.out.println(System.lineSeparator() + "Exit program");
-            } else if (select == 7) {
-                tracker.findAll();
-                System.out.println(System.lineSeparator() + "=== Your Item ===");
-                int number = 1;
-                for (Item itm : tracker.findAll()) {
-                    System.out.println("№" + number + " Item: " + itm.getId());
-                    number++;
-                }
             }
             System.out.println();
         }
