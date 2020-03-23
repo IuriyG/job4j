@@ -121,7 +121,7 @@ public class Tracker {
         for (int i = 0; i < items.length; i++) {
             if (items[i] != null && items[i].getId().equals(id)) {
                 items[i] = null;
-                System.arraycopy(items, i + 1, this.items, i, items.length - 1 - i);
+                System.arraycopy(items, i + 1, this.items, i, this.size--);
                 result = true;
                 break;
             }
@@ -142,6 +142,7 @@ public class Tracker {
             Item a = this.items[i];
             if (a.getId().equals(id)) {
                 items[i] = newItem;
+                items[i].setId(id);
                 result = true;
                 break;
             }
