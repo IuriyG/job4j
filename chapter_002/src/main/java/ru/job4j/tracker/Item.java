@@ -10,11 +10,9 @@ public class Item {
 
     @Override
     public String toString() {
-        return "Item {"
-                + "Id='" + id + '\''
-                + ", Name='" + name + '\''
-                + '}';
+        return "Id: " + id + ", Name: " + name;
     }
+
 
     public String getId() {
         return id;
