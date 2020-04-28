@@ -10,10 +10,10 @@ public class BackArray {
     public static void main(String[] args) {
         String[] names = {"Petr", "Ivan", "Nik", "Vasya"};
         int middle = names.length / 2;
-        for (int index = 0; index < middle; index++) {
+        for (int index = 1; index < middle; index++) {         //index <= middle исправлено
             String temp = names[index];
-            names[index] = names[names.length - 1];       //names[index] = names[names.length - index]; исправлено
-            names[names.length - 1] = temp;               //names[names.length - index] = temp;         исправлено
+            names[index] = names[names.length - index];
+            names[names.length - index] = temp;
         }
 
         System.out.println(Arrays.toString(names));
