@@ -52,28 +52,6 @@ public class Tracker {
     }
 
     /**
-     * Метод возвращает копию массива без null элементов.
-     * В мыссиве не будет пустых элементов, поэтому сократили код.
-     *
-     * @return готовый массив.
-     */
-    public Item[] findAll() {
-        /** Item[] outItem = new Item[this.items.length];
-         int size = 0;
-         for (int i = 0; i < getPosition(); i++) {
-         Item a = this.items[i];
-         if (a.getName() != null) {
-         outItem[size] = a;
-         size++;
-         }
-         }
-         this.items = Arrays.copyOf(outItem, size);
-         return this.items;
-         */
-        return Arrays.copyOf(items, getSize());
-    }
-
-    /**
      * Метод сравнивает в цикле все элементы массива с входящим аргументом key. Если есть совпадения копирует в результирующий массив и возвращает его.
      *
      * @param key входной аргумент.
@@ -93,11 +71,11 @@ public class Tracker {
     }
 
     /**
-     * Метод проверяет все элементы массива, сравнивая id с аргументом String id и озвращает найденный элемент.
+     * Метод проверяет все элементы массива, сравнивая id с аргументом String id и возвращает найденный элемент.
      * Если элемент не найден - возвращает null.
      *
      * @param id входной аргумент.
-     * @return возвращает найденый id.
+     * @return возвращает найденный id.
      */
     public Item findById(String id) {
         Item result = null;
@@ -130,7 +108,28 @@ public class Tracker {
     }
 
     /**
-     * Метод заменяет элемент в массиве, соответствующий входящему аргументу id, на новый элемент входящего аргументв newItem.
+     * Метод возвращает копию массива без null элементов.
+     * В массиве не будет пустых элементов, поэтому сократили код.
+     *
+     * @return готовый массив.
+     */
+    public Item[] findAll() {
+         /*Item[] outItem = new Item[this.items.length];
+         int size = 0;
+         for (int i = 0; i < getPosition(); i++) {
+         Item a = this.items[i];
+         if (a.getName() != null) {
+         outItem[size] = a;
+         size++;
+         }
+         }
+         this.items = Arrays.copyOf(outItem, size);
+         return this.items;*/
+        return Arrays.copyOf(items, getSize());
+    }
+
+    /**
+     * Метод заменяет элемент в массиве, соответствующий входящему аргументу id, на новый элемент входящего аргумента newItem.
      *
      * @param id      входящий аргумент.
      * @param newItem входящий аргумент.
