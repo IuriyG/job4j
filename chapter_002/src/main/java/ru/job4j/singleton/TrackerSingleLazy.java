@@ -9,15 +9,15 @@ import ru.job4j.tracker.Item;
  * нам нужно явно создать конструктор по умолчанию и присвоить ему модификатор private.
  */
 
-public class TrackerSingleSecond {
-    private static TrackerSingleSecond instance;
+public class TrackerSingleLazy {
+    private static TrackerSingleLazy instance;
 
-    private TrackerSingleSecond() {
+    private TrackerSingleLazy() {
     }
 
-    public static TrackerSingleSecond getInstance() {
+    public static TrackerSingleLazy getInstance() {
         if (instance == null) {
-            instance = new TrackerSingleSecond();
+            instance = new TrackerSingleLazy();
         }
         return instance;
     }
@@ -27,6 +27,6 @@ public class TrackerSingleSecond {
     }
 
     public static void main(String[] args) {
-        TrackerSingleSecond tss = TrackerSingleSecond.getInstance();
+        TrackerSingleLazy tss = TrackerSingleLazy.getInstance();
     }
 }

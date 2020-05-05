@@ -10,13 +10,13 @@ import ru.job4j.tracker.Item;
  * Это самый простой способ создания одноэлементного класса.
  */
 
-public class TrackerSingleThird {
-    private static final TrackerSingleThird INSTANCE = new TrackerSingleThird();
+public class TrackerSingleEager {
+    private static final TrackerSingleEager INSTANCE = new TrackerSingleEager();
 
-    private TrackerSingleThird() {
+    private TrackerSingleEager() {
     }
 
-    public static TrackerSingleThird getInstance() {
+    public static TrackerSingleEager getInstance() {
         return INSTANCE;
     }
 
@@ -25,6 +25,6 @@ public class TrackerSingleThird {
     }
 
     public static void main(String[] args) {
-        TrackerSingleThird tst = TrackerSingleThird.getInstance();
+        TrackerSingleEager tst = TrackerSingleEager.getInstance();
     }
 }

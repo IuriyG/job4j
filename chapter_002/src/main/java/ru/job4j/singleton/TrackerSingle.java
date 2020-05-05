@@ -8,7 +8,7 @@ import ru.job4j.tracker.Item;
  * В JDK 1.5 появилось новое ключевое слово enum. Оно используется для создания ограниченного количество объектов.
  */
 
-public enum TrackerSingleFirst {
+public enum TrackerSingle {
     INSTANCE; // здесь мы указываем перечисления.
 
     // Конструкторы и методы.
@@ -17,6 +17,6 @@ public enum TrackerSingleFirst {
     }
 
     public static void main(String[] args) {
-        TrackerSingleFirst tsf = TrackerSingleFirst.INSTANCE;
+        TrackerSingle tsf = TrackerSingle.INSTANCE;
     }
 }

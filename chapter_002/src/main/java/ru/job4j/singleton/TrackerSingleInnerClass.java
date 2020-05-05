@@ -8,11 +8,11 @@ import ru.job4j.tracker.Item;
  * Последний вариант объект класса находиться в поле внутреннего класса.
  */
 
-public class TrackerSingleFourth {
-    private TrackerSingleFourth() {
+public class TrackerSingleInnerClass {
+    private TrackerSingleInnerClass() {
     }
 
-    public static TrackerSingleFourth getInstance() {
+    public static TrackerSingleInnerClass getInstance() {
         return Holder.INSTANCE;
     }
 
@@ -21,10 +21,10 @@ public class TrackerSingleFourth {
     }
 
     private static final class Holder {
-        private static final TrackerSingleFourth INSTANCE = new TrackerSingleFourth();
+        private static final TrackerSingleInnerClass INSTANCE = new TrackerSingleInnerClass();
     }
 
     public static void main(String[] args) {
-        TrackerSingleFourth tracker = TrackerSingleFourth.getInstance();
+        TrackerSingleInnerClass tracker = TrackerSingleInnerClass.getInstance();
     }
 }

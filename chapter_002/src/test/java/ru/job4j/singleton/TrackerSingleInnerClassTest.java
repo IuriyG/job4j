@@ -3,12 +3,12 @@ package ru.job4j.singleton;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TrackerSingleFourthTest {
+public class TrackerSingleInnerClassTest {
 
     @Test
     public void whenTrackerSingleIsTrue() {
-        TrackerSingleThird tst = TrackerSingleThird.getInstance();
-        TrackerSingleThird tst2 = TrackerSingleThird.getInstance();
+        TrackerSingleEager tst = TrackerSingleEager.getInstance();
+        TrackerSingleEager tst2 = TrackerSingleEager.getInstance();
         Assert.assertEquals(tst, tst2);
     }
 }
