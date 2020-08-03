@@ -24,7 +24,9 @@ public class Shop {
         for (Product product : products) {
             if (product != null) {
                 System.out.println(product.getName());
-            } else System.out.println("null");
+            } else {
+                System.out.println("null");
+            }
         }
     }
 
