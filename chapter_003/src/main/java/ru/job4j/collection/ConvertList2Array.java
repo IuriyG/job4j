@@ -18,7 +18,7 @@ public class ConvertList2Array {
             if (cell < cells) {
                 array[row][cell] = num;
                 cell++;
-                if (cell > 2) {
+                if (cell == cells) {
                     row++;
                     cell = 0;
                 }
