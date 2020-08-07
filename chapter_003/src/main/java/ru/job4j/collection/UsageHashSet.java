@@ -8,6 +8,7 @@ import java.util.HashSet;
  * 3. Добавьте цикл for-each и выведите элементы коллекции HashSet на консоль.
  * 4. Залейте код в репозиторий, оставьте ссылку на коммит и переведите на ответственного.
  */
+
 public class UsageHashSet {
     public static void main(String[] args) {
         HashSet<String> autos = new HashSet<>();

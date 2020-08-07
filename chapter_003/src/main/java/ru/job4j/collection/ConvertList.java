@@ -9,6 +9,7 @@ import java.util.List;
  * 2. Залейте код в репозиторий.
  * 3. Оставьте ссылку на коммит и переведите на ответственного.
  */
+
 public class ConvertList {
     public static List<Integer> convert(List<int[]> list) {
         List<Integer> rsl = new ArrayList<>();
