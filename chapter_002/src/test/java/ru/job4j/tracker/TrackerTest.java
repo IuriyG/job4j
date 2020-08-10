@@ -1,6 +1,10 @@
 package ru.job4j.tracker;
 
+import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;
@@ -19,7 +23,7 @@ public class TrackerTest {
     }
 
     /**
-     * Тест для метода findAll. Метод возвращает копию массива без null элементов.
+     * Тест для метода findAll. Метод возвращает копию коллекции без null элементов.
      */
     @Test
     public void whenFindAllReturnCopyArrayWithoutNull() {
@@ -27,10 +31,17 @@ public class TrackerTest {
         Item one = tracker.add(new Item("test1"));
         Item three = tracker.add(new Item("test2"));
         Item four = tracker.add(new Item("test3"));
-        Item[] items = new Item[]{one, three, four};
-        assertThat(tracker.findAll(), is(items));
+        List<Item> expected = new ArrayList<>();
+        expected.add(one);
+        expected.add(three);
+        expected.add(four);
+        Assert.assertEquals(tracker.findAll(), (expected));
     }
 
+    /**
+     * Тест для метода findByName. Метод возвращает найденный в коллекции элемент по входящему аргументу.
+     *
+     */
     @Test
     public void whenFindByNameReturnCopyArray() {
         Tracker tracker = new Tracker();
@@ -39,12 +50,14 @@ public class TrackerTest {
         Item three = tracker.add(new Item("test1"));
         Item four = tracker.add(new Item("test3"));
         Item five = tracker.add(new Item(null));
-        Item[] expected = new Item[]{one, three};
-        assertThat(tracker.findByName("test1"), is(expected));
+        List<Item> expected = new ArrayList<>();
+        expected.add(one);
+        expected.add(three);
+        Assert.assertEquals(tracker.findByName("test1"), expected);
     }
 
     /**
-     * Тест для метода findById, при котором находится входной аргумент в массиве, метод возвращает найденый элемент.
+     * Тест для метода findById, при котором находится входной аргумент в коллекции, метод возвращает найденный элемент.
      */
     @Test
     public void whenFindByIdIsTrue() {
@@ -58,7 +71,7 @@ public class TrackerTest {
     }
 
     /**
-     * Тест для метода findById, при котором отсутствует входной аргумент в массиве и метод возвращает null.
+     * Тест для метода findById, при котором отсутствует входной аргумент в коллекции и метод возвращает null.
      */
     @Test
     public void whenFindByIdIsFalse() {

@@ -1,33 +1,20 @@
 package ru.job4j.tracker;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 /**
- * 1. Реализовать класс Tracker. Класс трекер - это обертка над массивом;
- * 2. В классе должно быть поле private Item[] items = new Item[100];
- * 3. Данный класс используется, как хранилище для заявок;
- * 4. В нем должны быть следующие методы:
- * добавление заявок - public Item add(Item item);
- * получение списка всех заявок - public Item[] findAll();
- * получение списка по имени - public Item[] findByName(String key);
- * получение заявки по id - public Item findById(String id);
- * 5. На все методы необходимо написать тесты.
+ * 1. Замените массив на коллекцию java.util.ArrayList в проекте Tracker.
+ * 2. Залейте код в репозиторий и оставьте ссылку.
+ * 3. Переведите на ответственного.
  */
 
 public class Tracker {
     /**
-     * Массив для хранения заявок.
+     * Коллекция для хранения заявок.
      */
-    private Item[] items = new Item[100];
-    /**
-     * Указатель ячейки для новой заявки.
-     */
-    private int size = 0;
-
-    public int getSize() {
-        return size;
-    }
+    private List<Item> items = new ArrayList<>();
 
     /**
      * Метод добавления заявки в хранилище.
@@ -36,7 +23,7 @@ public class Tracker {
      */
     public Item add(Item item) {
         item.setId(this.generateId());
-        items[this.size++] = item;
+        items.add(item);
         return item;
     }
 
@@ -52,27 +39,24 @@ public class Tracker {
     }
 
     /**
-     * Метод сравнивает в цикле все элементы массива с входящим аргументом key.
-     * Если есть совпадения копирует в результирующий массив и возвращает его.
+     * Метод сравнивает в цикле все элементы коллекции с входящим аргументом key.
+     * Если есть совпадения копирует в результирующую коллекцию и возвращает её.
      *
      * @param key входной аргумент.
-     * @return возвращает массив.
+     * @return возвращает коллекцию.
      */
-    public Item[] findByName(String key) {
-        Item[] outItem = new Item[getSize()];
-        int size = 0;
-        for (int i = 0; i < getSize(); i++) {
-            Item b = this.items[i];
+    public List<Item> findByName(String key) {
+        List<Item> outItem = new ArrayList<>();
+        for (Item b : items) {
             if (b.getName() != null && b.getName().equals(key)) {
-                outItem[size] = b;
-                size++;
+                outItem.add(b);
             }
         }
-        return Arrays.copyOf(outItem, size);
+        return outItem;
     }
 
     /**
-     * Метод проверяет все элементы массива, сравнивая id с аргументом String id
+     * Метод проверяет все элементы коллекции, сравнивая id с аргументом String id
      * и возвращает найденный элемент.
      * Если элемент не найден - возвращает null.
      *
@@ -81,9 +65,9 @@ public class Tracker {
      */
     public Item findById(String id) {
         Item result = null;
-        for (int i = 0; i < getSize(); i++) {
-            if (this.items[i] != null && this.items[i].getId().equals(id)) {
-                result = items[i];
+        for (Item item : items) {
+            if (item != null && item.getId().equals(id)) {
+                result = item;
                 break;
             }
         }
@@ -91,48 +75,34 @@ public class Tracker {
     }
 
     /**
-     * Метод удаляет значение в массиве соответствующее входящему аргументу и
-     * возвращает массив с null ссылкой вместо элемента.
+     * Метод удаляет значение в коллекции соответствующее входящему аргументу и
+     * возвращает коллекцию с null ссылкой вместо элемента.
      *
      * @param id входящий аргумент.
      * @return заканчивает цикл.
      */
     public boolean deleteItem(String id) {
         boolean result = false;
-        for (int i = 0; i < items.length; i++) {
-            if (items[i] != null && items[i].getId().equals(id)) {
-                items[i] = null;
-                System.arraycopy(items, i + 1, this.items, i, this.size--);
+        for (Item item : items) {
+            if (item.getId().equals(id)) {
+                items.remove(item);
                 result = true;
-                break;
             }
         }
         return result;
     }
 
     /**
-     * Метод возвращает копию массива без null элементов.
-     * В массиве не будет пустых элементов, поэтому сократили код.
+     * Метод возвращает копию коллекции без null элементов.
      *
      * @return готовый массив.
      */
-    public Item[] findAll() {
-         /*Item[] outItem = new Item[this.items.length];
-         int size = 0;
-         for (int i = 0; i < getPosition(); i++) {
-         Item a = this.items[i];
-         if (a.getName() != null) {
-         outItem[size] = a;
-         size++;
-         }
-         }
-         this.items = Arrays.copyOf(outItem, size);
-         return this.items;*/
-        return Arrays.copyOf(items, getSize());
+    public List<Item> findAll() {
+        return List.copyOf(items);
     }
 
     /**
-     * Метод заменяет элемент в массиве, соответствующий входящему аргументу id,
+     * Метод заменяет элемент в коллекции, соответствующий входящему аргументу id,
      * на новый элемент входящего аргумента newItem.
      *
      * @param id      входящий аргумент.
@@ -141,11 +111,10 @@ public class Tracker {
      */
     public boolean replace(String id, Item newItem) {
         boolean result = false;
-        for (int i = 0; i < getSize(); i++) {
-            Item a = this.items[i];
-            if (a.getId().equals(id)) {
-                items[i] = newItem;
-                items[i].setId(id);
+        for (int i = 0; i < items.size(); i++) {
+            if (items.get(i).getId().equals(id)) {
+                items.set(i, newItem);
+                items.get(i).setId(id);
                 result = true;
                 break;
             }
