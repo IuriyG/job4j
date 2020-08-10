@@ -83,12 +83,13 @@ public class Tracker {
      */
     public boolean deleteItem(String id) {
         boolean result = false;
-        for (Item item : items) {
-            if (item.getId().equals(id)) {
-                items.remove(item);
+        for (int i = 0; i < items.size(); i++) {
+            if (items.get(i).getId().equals(id)) {
+                items.remove(i);
                 result = true;
             }
         }
+
         return result;
     }
 
@@ -113,8 +114,8 @@ public class Tracker {
         boolean result = false;
         for (int i = 0; i < items.size(); i++) {
             if (items.get(i).getId().equals(id)) {
+                newItem.setId(id);
                 items.set(i, newItem);
-                items.get(i).setId(id);
                 result = true;
                 break;
             }
