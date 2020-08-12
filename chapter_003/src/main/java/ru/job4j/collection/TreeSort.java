@@ -1,0 +1,25 @@
+package ru.job4j.collection;
+
+import java.util.*;
+
+/**
+ *  Интерфейс java.util.TreeSet
+ *  Классы этого интерфейса - это java.util.HashSet и java.util.TreeSet.
+ *  Эта коллекция сразу сортирует элементы.
+ *  TreeSet требует от входящего типа данных поддержания интерфейса java.util.Comparable.
+ */
+public class TreeSort {
+
+    public static void main(String[] args) {
+        Set<Integer> numbers = new TreeSet<>(); // сортировка по возрастанию.
+        numbers.add(5);
+        numbers.add(1);
+        numbers.add(3);
+        System.out.println(numbers);
+        Set<Integer> numbers2 = new TreeSet<>(Collections.reverseOrder());
+        numbers2.add(5);
+        numbers2.add(1);
+        numbers2.add(3);
+        System.out.println(numbers2); // Сортировка по убыванию
+    }
+}

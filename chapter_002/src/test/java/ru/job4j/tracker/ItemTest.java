@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 public class ItemTest {
 
     /**
-     * Тест для метода ItemDescendingSortByName.
+     * Тест использует переопределенный компаратор ItemDescendingSortByName.
      * Метод демонстрирует сортировку по возрастанию.
      */
 
@@ -33,7 +33,7 @@ public class ItemTest {
     }
 
     /**
-     * Тест для метода ItemDescendingSortByName.
+     * Тест использует переопределенный компаратор ItemDescendingSortByName.
      * Метод демонстрирует сортировку по убыванию.
      */
 
