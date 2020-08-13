@@ -14,8 +14,7 @@ public class ItemTest {
      * Тест использует переопределенный компаратор ItemDescendingSortByName.
      * Метод демонстрирует сортировку по возрастанию.
      */
-
-    @Test
+   @Test
     public void itemSortAscending() {
 
         Tracker tracker = new Tracker();
@@ -36,7 +35,6 @@ public class ItemTest {
      * Тест использует переопределенный компаратор ItemDescendingSortByName.
      * Метод демонстрирует сортировку по убыванию.
      */
-
     @Test
     public void itemSortDescending() {
 

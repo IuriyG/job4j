@@ -10,6 +10,7 @@ import static org.hamcrest.Matchers.greaterThan;
 import static org.junit.Assert.*;
 
 public class UserTest {
+
     /**
      * Метод демонстрирует сортировку по возрасту, если имена идентичны.
      */
@@ -24,11 +25,11 @@ public class UserTest {
     }
 
     /**
-     * Метод демонстрирует сортировку имён по возрасту.
+     * Метод демонстрирует сортировку имён по возрастанию.
      */
     @Test
     public void whenComparePertVSIvan() {
         int rsl = new User("Petr", 32).compareTo(new User("Ivan", 31));
-        assertNotNull(String.valueOf(rsl), greaterThan(0));
+        assertThat(rsl, greaterThan(0));
     }
 }
