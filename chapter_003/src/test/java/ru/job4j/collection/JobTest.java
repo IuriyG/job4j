@@ -1,7 +1,5 @@
 package ru.job4j.collection;
 
-import junit.framework.Assert;
-import org.hamcrest.collection.IsIterableContainingInOrder;
 import org.junit.Test;
 
 import java.util.*;
@@ -27,10 +25,10 @@ public class JobTest {
     public void whenComparatorByNameAndPriority() {
         Comparator<Job> cmpNamePriority = new JobDescByName().thenComparing(new JobDescByPriority());
         int rsl = cmpNamePriority.compare(
-                new Job("Impl task", 0),
+                new Job("Fix bug", 0),
                 new Job("Fix bug", 1)
         );
-        assertThat(rsl, lessThan(0));
+        assertThat(rsl, greaterThan(0));
     }
 
     /**
@@ -41,9 +39,9 @@ public class JobTest {
         Comparator<Job> cmpNamePriority = new JobAscByName().thenComparing(new JobAscByPriority());
         int rsl = cmpNamePriority.compare(
                 new Job("Impl task", 0),
-                new Job("Fix bug", 1)
+                new Job("Impl task", 1)
         );
-        assertThat(rsl, greaterThan(0));
+        assertThat(rsl, lessThan(0));
     }
 
     /**
@@ -54,9 +52,9 @@ public class JobTest {
     public void whenComparatorDescByNameAscByPriorityAscByNameLn() {
         Comparator<Job> jobComparator = new JobDescByName().thenComparing(new JobAscByPriority().thenComparing(new JobAscByNameLn()));
         int rsl = jobComparator.compare(
-                new Job("Impl task", 2),
+                new Job("Fix bug", 4),
                 new Job("Fix bug", 4));
-        assertThat(rsl, lessThan(0));
+        assertThat(rsl, is(0));
     }
 
     /**
@@ -67,7 +65,7 @@ public class JobTest {
         Comparator<Job> jobComparator = new JobAscByPriority().thenComparing(new JobDescByName());
         int rsl = jobComparator.compare(
                 new Job("Fix bugs", 4),
-                new Job("Reboot server", 1));
+                new Job("Reboot server", 4));
         assertThat(rsl, greaterThan(0));
     }
 
