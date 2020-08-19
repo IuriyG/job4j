@@ -3,12 +3,12 @@ package ru.job4j;
 public class Diagnose {
     private String bloodGroup;
 
-    public void ImmuneResearchMethods() {
+    public void immuneResearchMethods() {
     }
 
-    public void BiochemicalResearchMethods() {
+    public void biochemicalResearchMethods() {
     }
 
-    public void Hematology() {
+    public void hematology() {
     }
 }

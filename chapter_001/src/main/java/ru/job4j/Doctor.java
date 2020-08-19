@@ -7,7 +7,7 @@ public class Doctor extends Profession {
         return null;
     }
 
-    void ExaminesAPatient() {
+    void examinesAPatient() {
     }
 
     void giveAdvice() {

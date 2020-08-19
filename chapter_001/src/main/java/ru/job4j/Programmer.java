@@ -2,11 +2,11 @@ package ru.job4j;
 
 public class Programmer extends Engineer {
     private String programmingLanguage;
-    private boolean GitHub;
+    private boolean gitHub;
 
-    public void SoftwareDesign() {
+    public void softwareDesign() {
     }
 
-    public void SoftwareDevelopment() {
+    public void softwareDevelopment() {
     }
 }

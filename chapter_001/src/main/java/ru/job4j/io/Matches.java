@@ -22,8 +22,8 @@ public class Matches {
                 System.out.println("Нельзя выбрать это число!" + System.lineSeparator() + "Ваш выбор:");
                 select = Integer.parseInt(sc.nextLine());
             }
-
-            System.out.println("На столе осталось " + (total -= select) + " спичек.");
+            total = total - select;
+            System.out.println("На столе осталось " + total + " спичек.");
             if (total <= 0) {
                 System.out.println("Победил игрок №" + gamer + "!");
                 break;
