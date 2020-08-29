@@ -64,13 +64,15 @@ public class BankService {
      */
     public Account findByRequisite(String passport, String requisite) {
         User user = findByPassport(passport);
-        List<Account> accountList = users.get(user);
-        if (user == null) {
-            return null;
-        } else {
-            int index = accountList.indexOf(new Account(requisite, -1));
-            return accountList.get(index);
+        if (user != null) {
+            List<Account> accountList = users.get(user);
+            for (Account list : accountList) {
+                if (list.getRequisite().equals(requisite)) {
+                    return list;
+                }
+            }
         }
+        return null;
     }
 
     /**
