@@ -6,7 +6,6 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.function.Predicate;
 
 import static org.hamcrest.core.Is.is;
@@ -31,8 +30,8 @@ public class SchoolTest {
     @Test
     public void whenCollectClassA() {
         School sc = new School();
-        Predicate<Student> pr = Objects::isNull;
-        List<Student> rsl = sc.collect(students, pr);
+        Predicate<Student> predicate = student -> student.getScore() > 50 && student.getScore() >= 70;
+        List<Student> rsl = sc.collect(students, predicate);
         List<Student> expected = new ArrayList<>();
         expected.add(new Student(70, "Surname7"));
         expected.add(new Student(80, "Surname8"));
@@ -43,7 +42,7 @@ public class SchoolTest {
     @Test
     public void whenCollectClassB() {
         School sc = new School();
-        Predicate<Student> pr = Objects::isNull;
+        Predicate<Student> pr = student -> student.getScore() >= 50 && student.getScore() < 70;
         List<Student> rsl = sc.collect(students, pr);
         List<Student> expected = new ArrayList<>();
         expected.add(new Student(50, "Surname5"));
@@ -54,7 +53,7 @@ public class SchoolTest {
     @Test
     public void whenCollectClassC() {
         School sc = new School();
-        Predicate<Student> pr = Objects::isNull;
+        Predicate<Student> pr = student -> student.getScore() < 50;
         List<Student> rsl = sc.collect(students, pr);
         List<Student> expected = new ArrayList<>();
         expected.add(new Student(10, "Surname1"));
