@@ -12,11 +12,12 @@ import java.util.stream.Collectors;
  * 2. Преобразовать список учеников в Map.
  * 3. В качестве ключа использовать фамилию ученика.
  * 4. В качестве значение использовать объект ученика.
+ * 5. В карте могут появиться дубликаты, этого нужно избежать, используйте перегруженный toMap() с тремя параметрами.
  */
 public class ListToMap {
 
     public Map<String, Object> studentSort(List<Student> list) {
 
-        return list.stream().collect(Collectors.toMap(Student::getSurname, student -> student));
+        return list.stream().collect(Collectors.toMap(Student::getSurname, student -> student, (student, student2) -> student + " | " + student2));
     }
 }
