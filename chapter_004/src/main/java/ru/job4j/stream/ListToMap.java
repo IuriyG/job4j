@@ -16,8 +16,8 @@ import java.util.stream.Collectors;
  */
 public class ListToMap {
 
-    public Map<String, Object> studentSort(List<Student> list) {
+    public Map<String, Student> studentSort(List<Student> list) {
 
-        return list.stream().collect(Collectors.toMap(Student::getSurname, student -> student, (student, student2) -> student + " | " + student2));
+        return list.stream().collect(Collectors.toMap(Student::getSurname, student -> student, (t, t2) -> t));
     }
 }
