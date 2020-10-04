@@ -13,14 +13,15 @@ public class MatrixToListTest {
     @Test
     public void whenTransformTrue() {
         MatrixToList matrixToList = new MatrixToList();
-        List<List<Integer>> matrix = List.of(
-                List.of(1, 2),
-                List.of(3, 4),
-                List.of(8, 10)
-        );
+
+        int[][] matrix = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
 
         List<Integer> rsl = matrixToList.transformToMatrix(matrix);
-        List<Integer> expected = new ArrayList<>(List.of(1, 2, 3, 4, 8, 10));
+        List<Integer> expected = new ArrayList<>(List.of(1, 2, 3, 4, 5, 6, 7, 8, 9));
         assertThat(rsl, is(expected));
     }
 }

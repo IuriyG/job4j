@@ -1,8 +1,10 @@
 package ru.job4j.stream;
 
-import java.util.Collection;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 /**
  * В этом задании нужно преобразовать числовую матрицу в список.
@@ -13,7 +15,8 @@ import java.util.stream.Collectors;
  */
 public class MatrixToList {
 
-    public List<Integer> transformToMatrix(List<List<Integer>> list) {
-        return list.stream().flatMap(Collection::stream).collect(Collectors.toList());
+    public List<Integer> transformToMatrix(int[][] array) {
+        IntStream intStream = Stream.of(array).flatMapToInt(ints -> Arrays.stream(ints).sorted());
+        return intStream.boxed().collect(Collectors.toList());
     }
 }
