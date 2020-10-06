@@ -18,7 +18,7 @@ import java.util.function.Function;
  *     List<Double> expected = Arrays.asList(11D, 13D, 15D);
  *     assertThat(result, is(expected));
  * }
- *     3. Необходимо использовать только встроенные функциональные интерфейсы
+ * 3. Необходимо использовать только встроенные функциональные интерфейсы
  */
 public class Diapason {
 

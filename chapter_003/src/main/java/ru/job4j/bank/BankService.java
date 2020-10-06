@@ -2,6 +2,9 @@ package ru.job4j.bank;
 
 import java.util.*;
 
+/**
+ * Использовать Steam API для методов findByPassport() и findByRequisite().
+ */
 public class BankService {
     private final Map<User, List<Account>> users = new HashMap<>();
 
@@ -42,21 +45,18 @@ public class BankService {
 
     /**
      * Метод ищет пользователя по паспорту.
+     * Использовать Steam API.
      *
      * @param passport Паспорт пользователя.
      * @return Возвращает пользователя или null, если пользователь не найден.
      */
     public User findByPassport(String passport) {
-        for (User key : users.keySet()) {
-            if (key.getPassport().equals(passport)) {
-                return key;
-            }
-        }
-        return null;
+        return users.keySet().stream().filter(e -> e.getPassport().equals(passport)).findFirst().orElse(null);
     }
 
     /**
      * Метод ищет пользователя по паспорту и реквизитам.
+     * Использовать Steam API.
      *
      * @param passport  Паспорт пользователя.
      * @param requisite Реквизиты пользователя.

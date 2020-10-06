@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
  * 10А диапазон балла [70: 100],
  * 10Б диапазон балла [50: 70);
  * 10B диапазон балла (0: 50);
- * <b>Задание.<b/>
+ * <b>Задание.</b>
  * 1. Создайте класс Student. В классе Student должны быть два поля: int score и String surname;
  * 2. Создайте класс School c методом public List<Student> collect(List<Student> students, Predicate<Student> predict);
  * 3. Создайте класс - тест SchoolTest с тремя методами для получения списка учеников для классов: А, B, C.
