@@ -63,16 +63,7 @@ public class BankService {
      * @return Возвращает пользователя или null, если пользователь не найден.
      */
     public Account findByRequisite(String passport, String requisite) {
-        User user = findByPassport(passport);
-        if (user != null) {
-            List<Account> accountList = users.get(user);
-            for (Account list : accountList) {
-                if (list.getRequisite().equals(requisite)) {
-                    return list;
-                }
-            }
-        }
-        return null;
+        return users.getOrDefault(findByPassport(passport), Collections.emptyList()).stream().filter(account -> account.getRequisite().equals(requisite)).findFirst().orElse(null);
     }
 
     /**
