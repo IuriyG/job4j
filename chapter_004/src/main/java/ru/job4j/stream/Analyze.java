@@ -61,7 +61,8 @@ public class Analyze {
      * @return возвращает результат или 0.
      */
     public static double averageScore(Stream<Pupil> stream) {
-        return stream.flatMap(pupil -> pupil.getSubjects().stream()).mapToInt(Subject::getScore).average().orElse(0D);
+        return stream.flatMap(pupil -> pupil.getSubjects()
+                .stream()).mapToInt(Subject::getScore).average().orElse(0D);
     }
 
     /**
@@ -71,7 +72,9 @@ public class Analyze {
      * @return возвращает список из объекта Tuple (имя ученика и средний балл или 0).
      */
     public static List<Tuple> averageScoreBySubject(Stream<Pupil> stream) {
-        return stream.map(pupil -> new Tuple(pupil.getName(), pupil.getSubjects().stream().mapToInt(Subject::getScore).average().orElse(0D))).collect(Collectors.toList());
+        return stream.map(pupil -> new Tuple(pupil.getName(), pupil.getSubjects()
+                .stream().mapToInt(Subject::getScore).average()
+                .orElse(0D))).collect(Collectors.toList());
     }
 
     /**
@@ -81,8 +84,10 @@ public class Analyze {
      * @return возвращает список из объекта Tuple (название предмета и средний балл).
      */
     public static List<Tuple> averageScoreByPupil(Stream<Pupil> stream) {
-        Map<String, Double> map = stream.flatMap(pupil -> pupil.getSubjects().stream()).collect(Collectors.groupingBy(Subject::getName, Collectors.averagingDouble(Subject::getScore)));
-        return map.entrySet().stream().map(stringDoubleEntry -> new Tuple(stringDoubleEntry.getKey(), stringDoubleEntry.getValue())).collect(Collectors.toList());
+        return stream.flatMap(pupil -> pupil.getSubjects().stream())
+                .collect(Collectors.groupingBy(Subject::getName, Collectors.averagingDouble(Subject::getScore)))
+                .entrySet().stream().map(stringDoubleEntry -> new Tuple(stringDoubleEntry.getKey(), stringDoubleEntry
+                        .getValue())).collect(Collectors.toList());
     }
 
     /**
@@ -92,7 +97,9 @@ public class Analyze {
      * @return возвращает объект Tuple (имя ученика и суммарный балл или null).
      */
     public static Tuple bestStudent(Stream<Pupil> stream) {
-        return stream.map(pupil -> new Tuple(pupil.getName(), pupil.getSubjects().stream().mapToInt(Subject::getScore).sum())).max(Comparator.comparing(Tuple::getScore)).orElse(null);
+        return stream.map(pupil -> new Tuple(pupil.getName(), pupil.getSubjects()
+                .stream().mapToInt(Subject::getScore).sum())).max(Comparator.comparing(Tuple::getScore))
+                .orElse(null);
     }
 
     /**
@@ -102,7 +109,9 @@ public class Analyze {
      * @return возвращает объект Tuple (имя предмета, сумма баллов каждого ученика по этому предмету или null).
      */
     public static Tuple bestSubject(Stream<Pupil> stream) {
-        Map<String, Double> map = stream.flatMap(pupil -> pupil.getSubjects().stream()).collect(Collectors.groupingBy(Subject::getName, Collectors.summingDouble(Subject::getScore)));
-        return map.entrySet().stream().map(stringDoubleEntry -> new Tuple(stringDoubleEntry.getKey(), stringDoubleEntry.getValue())).max(Comparator.comparing(Tuple::getScore)).orElse(null);
+        return stream.flatMap(pupil -> pupil.getSubjects().stream())
+                .collect(Collectors.groupingBy(Subject::getName, Collectors.summingDouble(Subject::getScore)))
+                .entrySet().stream().map(stringDoubleEntry -> new Tuple(stringDoubleEntry.getKey(), stringDoubleEntry
+                        .getValue())).max(Comparator.comparing(Tuple::getScore)).orElse(null);
     }
 }
