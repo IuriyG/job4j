@@ -2,7 +2,7 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/IuriyG/job4j?color=success)
 [![codecov](https://codecov.io/gh/IuriyG/job4j/branch/master/graph/badge.svg)](https://codecov.io/gh/IuriyG/job4j)
 
-<font size="6" color="#03A9F4" face="Arial">[Job4j](https://job4j.ru "Обучение и трудоустройство Java-программистов от Junior до Senior.")</font>
+# <font size="10" color="#03A9F4" face="Arial">[Job4j](https://job4j.ru "Обучение и трудоустройство Java-программистов от Junior до Senior.")</font>
 
 Я начал обучение в проекте Job4j!
 
@@ -13,12 +13,11 @@
 Весь код будешь заливать на GitHub. Займешься рефакторингом кода с применением шаблонов проектирования. 
 После этого уровня ты сможешь претендовать на позиции Стажер Java разработчик.
 
----
-
-<font size="5" color="#03A9F4" face="Arial">[Часть 001. Базовый синтаксис.](https://github.com/IuriyG/job4j/tree/master/chapter_001/src/main/java/ru/job4j) </font>
 
 
-***
+## <font size="8" color="#03A9F4" face="Arial">[Часть 001. Базовый синтаксис.](https://github.com/IuriyG/job4j/tree/master/chapter_001/src/main/java/ru/job4j) </font>
+
+
 
 <details><summary>0. Первая программа.</summary>
 
@@ -256,11 +255,11 @@
 
   </details>
 
-***
 
-<font size="5" face="Arial">[Часть 002. ООП.](https://github.com/IuriyG/job4j/tree/master/chapter_002/src/test/java/ru/job4j) </font>
 
-***
+## <font size="8" color="#03A9F4" face="Arial">[Часть 002. ООП.](https://github.com/IuriyG/job4j/tree/master/chapter_002/src/test/java/ru/job4j) </font>
+
+
 
 <details><summary>0. Инструменты.</summary>
 
@@ -418,11 +417,11 @@
 </details>
 </details>
 
-***
 
-<font size="5" color="#03A9F4" face="Arial">[Часть 003. Collections. Lite.](https://github.com/IuriyG/job4j/tree/master/chapter_003/src/main/java/ru/job4j) </font>
 
-***
+## <font size="8" color="#03A9F4" face="Arial">[Часть 003. Collections. Lite.](https://github.com/IuriyG/job4j/tree/master/chapter_003/src/main/java/ru/job4j) </font>
+
+
 
 <details><summary>1. Collections Framework.</summary>
 
@@ -489,11 +488,12 @@
 </details>
 </details>
 
-***
 
-<font size="5" color="#03A9F4" face="Arial">[Часть 004. FP, Lambda, Stream API.](https://github.com/IuriyG/job4j/tree/master/chapter_004/src/main/java/ru/job4j) </font>
 
-***
+## <font size="8" color="#03A9F4" face="Arial">[Часть 004. FP, Lambda, Stream API.](https://github.com/IuriyG/job4j/tree/master/chapter_004/src/main/java/ru/job4j) </font>
+
+
+
 <details><summary>1. Lambda.</summary>
 
 * Функциональные интерфейсы.
@@ -520,7 +520,7 @@
 </details>
 </details>
 
-<details><summary>3. Jdk 1.9, 1.10 Нововведения.</summary>
+<details><summary>3. Jdk 1.9, 1.10, Нововведения.</summary>
 
 * [Stream API улучшения.](https://github.com/IuriyG/job4j/commit/c36b22fac65100d277baf5b06767394d990b2e67)
 * [Collection API Улучшения.](https://github.com/IuriyG/job4j/commit/afbf9d97f4d3cd638a4febb8aab5d940921ec883)
