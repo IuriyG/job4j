@@ -2,7 +2,7 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/IuriyG/job4j?color=success)
 [![codecov](https://codecov.io/gh/IuriyG/job4j/branch/master/graph/badge.svg)](https://codecov.io/gh/IuriyG/job4j)
 
-# <font size="10" color="#03A9F4" face="Arial">[Job4j](https://job4j.ru "Обучение и трудоустройство Java-программистов от Junior до Senior.")</font>
+  # <font size="10" color="#03A9F4" face="Arial">[Job4j](https://job4j.ru "Обучение и трудоустройство Java-программистов от Junior до Senior.")</font>
 
 Я начал обучение в проекте Job4j! 
 И успешно закочнил!
