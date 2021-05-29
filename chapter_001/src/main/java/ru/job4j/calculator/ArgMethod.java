@@ -8,8 +8,9 @@ public class ArgMethod {
 
     /**
      * Метод выводит в консоль входящие переменные.
+     *
      * @param name имя.
-     * @param age возраст.
+     * @param age  возраст.
      */
     public static void hello(String name, int age) {
         System.out.println("Hello, " + "My name is " + name + " and I`m " + age + " years old");
@@ -17,6 +18,7 @@ public class ArgMethod {
 
     /**
      * Метод вызывает hello с заданными переменными.
+     *
      * @param args аргументы.
      */
     public static void main(String[] args) {
