@@ -21,6 +21,21 @@ public class Cinema {
     }
 
     /**
+     * Метод выводит на консоль результат переменных.
+     * Если обе переменных true, то можно идти, иначе - нет.
+     *
+     * @param allowByParent входящий аргумент.
+     * @param hasMoney      входящий аргумент.
+     */
+    public static void permission(boolean allowByParent, boolean hasMoney) {
+        if (allowByParent && hasMoney) {
+            System.out.println("I can go to the cinema.");
+        } else {
+            System.out.println("I can't.");
+        }
+    }
+
+    /**
      * Метод Main.
      *
      * @param args Входящий аргумент.
@@ -28,5 +43,10 @@ public class Cinema {
     public static void main(String[] args) {
         Cinema.access(21);
         Cinema.access(16);
+
+        permission(true, true);
+        permission(true, false);
+        permission(false, true);
+        permission(false, false);
     }
 }
