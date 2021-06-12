@@ -6,10 +6,10 @@ package ru.job4j.condition;
  */
 public class SwitchWeek {
     /**
-     * Метод выводит в консоль день недели в зависимости от входного параметра.
+     * Метод выводит в консоль день недели в виде строки.
      *
      * @param day входной аргумент.
-     * @return день недели
+     * @return день недели.
      */
     public static String nameOfDay(int day) {
         String name;
