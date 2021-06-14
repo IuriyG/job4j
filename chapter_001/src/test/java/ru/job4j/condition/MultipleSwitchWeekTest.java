@@ -81,9 +81,4 @@ public class MultipleSwitchWeekTest {
     public void when7ThenSunday() {
         assertThat(7, is(numberOfDay("Sunday")));
     }
-
-    @Test
-    public void when9ThenMinus1() {
-        assertThat(-1, is(numberOfDay(String.valueOf(9))));
-    }
 }
