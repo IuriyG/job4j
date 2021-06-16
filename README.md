@@ -1,11 +1,11 @@
-[![Build Status](https://travis-ci.org/IuriyG/job4j.svg?branch=master)](https://travis-ci.org/IuriyG/job4j)
+[![Build Status](https://travis-ci.com/IuriyG/job4j.svg?branch=master)](https://travis-ci.org/IuriyG/job4j)
 ![GitHub top language](https://img.shields.io/github/languages/top/IuriyG/job4j?color=success)
 [![codecov](https://codecov.io/gh/IuriyG/job4j/branch/master/graph/badge.svg)](https://codecov.io/gh/IuriyG/job4j)
 
   # <font size="10" color="#03A9F4" face="Arial">[Job4j](https://job4j.ru "Обучение и трудоустройство Java-программистов от Junior до Senior.")</font>
 
 Я начал обучение в проекте Job4j! 
-И успешно закочнил!
+И успешно закончил!
 
 <font size="3" color="#F5F5F5" face="Arial"> <b>Описание курса: </b> </font>
 Ты научишься использовать инструмент сборки Maven. Будешь писать модульные тесты и оформлять свой код, 
