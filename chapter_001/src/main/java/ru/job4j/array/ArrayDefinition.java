@@ -14,5 +14,15 @@ public class ArrayDefinition {
         System.out.println(ages.length);
         System.out.println(surnames.length);
         System.out.println(prices.length);
+
+        String[] names = new String[4];
+        names[0] = "Keanu Reeves";
+        names[1] = "Michael Nyqvist";
+        names[2] = "Adrianne Palicki";
+        names[3] = "Ian McShane";
+
+        for (String name : names) {
+            System.out.println(name);
+        }
     }
 }
