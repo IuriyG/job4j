@@ -6,6 +6,22 @@ package ru.job4j.array;
  */
 public class SwitchArray {
     /**
+     * Метод реализует обратную сортировку массива.
+     *
+     * @param array  Входящий массив.
+     * @param source Указывает на индекс элемента, который будет записан в ячейку с индексом dest.
+     * @param dest   Указывает на индекс элемента, который будет записан в ячейку с индексом source.
+     * @return Отсортированный массив.
+     */
+    public static int[] swap(int[] array, int source, int dest) {
+        int temp = array[source];
+        array[source] = array[dest];
+        array[dest] = temp;
+
+        return array;
+    }
+
+    /**
      * Метод меняет местами нулевой элемент и последний элемент в массиве.
      *
      * @param array Входящий массив.
