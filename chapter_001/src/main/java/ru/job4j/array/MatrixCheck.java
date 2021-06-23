@@ -1,14 +1,16 @@
 package ru.job4j.array;
 
 /**
- * Class MatrixCheck Класс для работы с символом в двумерном массиве. Определение столбцов или ячеек заполненных только символом 'X'.
+ * Класс для работы с символом в двумерном массиве. Определение ячеек заполненных символом.
+ *
  * @author IuriyG
  */
 public class MatrixCheck {
     /**
-     * Метод проверяет наличие символа 'X' по вертикали или по горизонтали
-     * @param board первый аргумент
-     * @return в зависимости от результата возвращает true или false
+     * Метод проверяет наличие символа 'X' по вертикали или по горизонтали.
+     *
+     * @param board первый аргумент.
+     * @return в зависимости от результата возвращает true или false.
      */
     public static boolean isWin(char[][] board) {
         boolean result = false;
@@ -22,9 +24,10 @@ public class MatrixCheck {
     }
 
     /**
-     * Метод проверяет наличие символа 'X' по диагонали
-     * @param board первый аргумент
-     * @return в зависимости от результата возвращает true или false
+     * Метод проверяет наличие символа по диагонали.
+     *
+     * @param board первый аргумент.
+     * @return в зависимости от результата возвращает true или false.
      */
     public static char[] extractDiagonal(char[][] board) {
         char[] rsl = new char[board.length];
@@ -35,10 +38,11 @@ public class MatrixCheck {
     }
 
     /**
-     * Метод проверяет наличие символа 'X' по горизонтали
-     * @param board первый аргумент
-     * @param row   второй аргумент
-     * @return в зависимости от результата возвращает true или false
+     * Метод проверяет наличие символа 'X' по горизонтали.
+     *
+     * @param board первый аргумент.
+     * @param row   второй аргумент.
+     * @return в зависимости от результата возвращает true или false.
      */
     public static boolean monoHorizontal(char[][] board, int row) {
         int count = 0;
@@ -51,15 +55,16 @@ public class MatrixCheck {
     }
 
     /**
-     * Метод проверяет наличие символа 'X' по вертикали
-     * @param board  первый аргумент
-     * @param column второй аргумент
-     * @return в зависимости от результата возвращает true или false
+     * Метод проверяет наличие символа 'X' по вертикали.
+     *
+     * @param board  первый аргумент.
+     * @param column второй аргумент.
+     * @return в зависимости от результата возвращает true или false.
      */
     public static boolean monoVertical(char[][] board, int column) {
         int count = 0;
-        for (int i = 0; i < board.length; i++) {
-            if (board[i][column] == 'X') {
+        for (char[] chars : board) {
+            if (chars[column] == 'X') {
                 count++;
             }
         }
