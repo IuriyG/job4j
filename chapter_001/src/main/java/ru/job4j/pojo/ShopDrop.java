@@ -15,8 +15,8 @@ public class ShopDrop {
      * @return Новый массив.
      */
     public static Product[] delete(Product[] products, int index) {
-        if (products.length - 1 - index >= 0) {
-            System.arraycopy(products, index + 1, products, index, products.length - 1 - index);
+        for (int i = index; i < products.length - 1; i++) {
+            products[i] = products[i + 1];
         }
         products[products.length - 1] = null;
         return products;
