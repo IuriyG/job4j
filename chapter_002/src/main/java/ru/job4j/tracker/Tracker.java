@@ -89,7 +89,6 @@ public class Tracker {
                 result = true;
             }
         }
-
         return result;
     }
 
