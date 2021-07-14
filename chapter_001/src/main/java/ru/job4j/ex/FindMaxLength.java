@@ -15,7 +15,9 @@ public class FindMaxLength {
         int max = 0;
         for (String el : shops) {
             if (el != null) {
-                max = el.length();
+                if (el.length() > max) {
+                    max = el.length();
+                }
             }
         }
         System.out.println("Max length : " + max);
