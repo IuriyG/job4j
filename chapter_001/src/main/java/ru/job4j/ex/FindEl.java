@@ -11,12 +11,10 @@ package ru.job4j.ex;
  * В сигнатуре метода объявить это исключение.
  * 4. Добавьте метод main, и в нем вызовите метод indexOf. В методе main используйте конструкцию try-catch.
  * 5. Залейте код в репозиторий, оставьте ссылку на коммит и переведите на ответственного.
- *
  */
 public class FindEl {
 
     public static int indexOf(String[] value, String key) throws ElementNotFoundException {
-
         int rsl = -1;
         for (int i = 0; i < value.length; i++) {
             if (value[i].equals(key)) {
