@@ -43,12 +43,10 @@ public class UserStore {
      * @throws UserInvalidException Исключение, информирующее о том, что пользователь не валидный.
      */
     public static boolean validate(User user) throws UserInvalidException {
-        for (int i = 0; i < user.getUsername().length(); i++) {
-            if (user.getUsername().length() < 3 || !user.isValid()) {
-                throw new UserInvalidException("The user is not valid !");
-            }
+        if (user.getUsername().length() < 3 || !user.isValid()) {
+            throw new UserInvalidException("The user is not valid !");
         }
-        return false;
+        return true;
     }
 
     /**
@@ -61,13 +59,19 @@ public class UserStore {
                 new User("Petr Arsentev", true)
         };
         try {
-            User user = findUser(users, "Petr Arsentev");
+            User user = findUser(users, "Per Arsentev");
 
             if (validate(user)) {
                 System.out.println("This user has an access");
             }
+        } catch (UserInvalidException uie) {
+            uie.printStackTrace();
+        } catch (UserNotFoundException ufe) {
+            ufe.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
+        } catch (Throwable th) {
+            th.printStackTrace();
         }
     }
 }
