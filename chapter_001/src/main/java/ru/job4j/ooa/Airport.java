@@ -18,7 +18,13 @@ public class Airport {
         airbus.setName("A380");
         System.out.println(airbus);
         airbus.printModel();
-        Airbus.setCountEngine(4);
+        airbus.printCountEngine();
+
+        System.out.println();
+
+        airbus.setName("A340");
+        System.out.println(airbus);
+        airbus.printModel();
         airbus.printCountEngine();
     }
 }
