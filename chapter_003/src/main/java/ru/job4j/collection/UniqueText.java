@@ -1,6 +1,7 @@
 package ru.job4j.collection;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 
 /**
@@ -18,14 +19,13 @@ public class UniqueText {
      * @return Если слова в массиве абсолютно идентичны, но true, иначе - false.
      */
     public static boolean isEquals(String originText, String duplicateText) {
-        String[] origin = originText.split(" ");
         String[] text = duplicateText.split(" ");
-        HashSet<String> check = new HashSet<>(Arrays.asList(origin));
-        for (int i = 0; i < check.size(); i++) {
-            for (String s : text) {
-                if (!check.contains(s)) {
-                    return false;
-                }
+        HashSet<String> check = new HashSet<>();
+        Collections.addAll(check, originText.split(" "));
+        System.out.println(check);
+        for (String s : text) {
+            if (!check.contains(s)) {
+                return false;
             }
         }
         return true;
