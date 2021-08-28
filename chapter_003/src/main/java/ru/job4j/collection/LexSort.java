@@ -16,8 +16,8 @@ public class LexSort implements Comparator<String> {
      */
     @Override
     public int compare(String left, String right) {
-        String s = left.replaceAll("\\D", "");
-        String s2 = right.replaceAll("\\D", "");
-        return Integer.parseInt(s) - Integer.parseInt(s2);
+        int s = Integer.parseInt(left.replaceAll("\\D", ""));
+        int s2 = Integer.parseInt(right.replaceAll("\\D", ""));
+        return Integer.compare(s, s2);
     }
 }
