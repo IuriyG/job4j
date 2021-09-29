@@ -10,11 +10,17 @@ package ru.job4j.oop;
 public class College {
     public static void main(String[] args) {
 
-        // создаем объекта класса Car.
+        /*
+            Создаем объекта класса Car.
+         */
         Freshman fm = new Freshman();
-        // делаем приведение к типу родителя Graduate.
+        /*
+            Делаем приведение к типу родителя Graduate.
+         */
         Graduate gdt = fm;
-        // делаем приведение к типу родителя Object.
+        /*
+            Делаем приведение к типу родителя Object.
+         */
         Object obj = fm;
     }
 }

@@ -2,7 +2,11 @@ package ru.job4j.array;
 
 public class FindLoop {
     public static int indexOf(int[] data, int el, int start, int finish) {
-        int rst = -1;   // если элемента нет в массиве, то возвращаем -1.
+
+        /*
+            Если элемента нет в массиве, то возвращаем -1.
+         */
+        int rst = -1;
         for (; start < finish; start++) {
             if (data[start] == el) {
                 rst = start;
@@ -13,7 +17,11 @@ public class FindLoop {
     }
 
     public int indexOf(int[] data, int el) {
-        int rst = -1;   // если элемента нет в массиве, то возвращаем -1.
+
+        /*
+            Если элемента нет в массиве, то возвращаем -1.
+         */
+        int rst = -1;
         int index;
         for (int i = 0; i < data.length; i++) {
             index = i;

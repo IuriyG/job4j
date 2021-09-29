@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Вывод сортировки.
+ * Класс демонстрирует работу компараторов.
  */
 
 public class JobSorter {
@@ -21,24 +21,36 @@ public class JobSorter {
         System.out.println();
         Collections.sort(jobs);
 
-        //Сортировка по возрастанию по полю priority
+        /*
+          Сортировка по возрастанию по полю priority.
+         */
         System.out.println("Сортировка по возрастанию по полю priority:" + System.lineSeparator() + jobs);
         System.out.println();
 
-        //Сортировка по возрастанию по полю name через компаратор
-        Collections.sort(jobs, new SortByNameJob());
+        /*
+          Сортировка по возрастанию по полю name через компаратор.
+         */
+        jobs.sort(new SortByNameJob());
         System.out.println("Сортировка по возрастанию по полю name через компаратор:" + System.lineSeparator() + jobs);
         System.out.println();
 
-        //Сортировка в возрастающем порядке по полю name с использованием метода thenComparing(в убывающем по рядке по полю priority).
-        Collections.sort(jobs, new SortByNameJob().thenComparing(new JobDescByPriority()));
+        /*
+        Сортировка в возрастающем порядке по полю name
+        с использованием метода thenComparing(в убывающем по рядке по полю priority).
+        */
+        jobs.sort(new SortByNameJob().thenComparing(new JobDescByPriority()));
         System.out.println("Сортировка в возрастающем порядке по полю name с использованием метода thenComparing(в убывающем по рядке по полю priority):" + System.lineSeparator() + jobs);
         System.out.println();
 
-        //Сортировка в возрастающем порядке по полю name,затем в обратном порядке по полю priority, затем в обратном порядке по количеству символов в name
-        Collections.sort(jobs, new SortByNameJob().thenComparing(new JobDescByPriority()).thenComparing(new JobDescByNameLn()));
-        System.out.println("Сортировка в возрастающем порядке по полю name,затем в убывающем порядке по полю priority, затем в обратном порядке по количеству символов в name:" + System.lineSeparator() + jobs);
+        /*
+        Сортировка в возрастающем порядке по полю name, затем в обратном порядке по полю priority,
+        затем в обратном порядке по количеству символов в name.
+        */
+        jobs.sort(new SortByNameJob()
+                .thenComparing(new JobDescByPriority())
+                .thenComparing(new JobDescByNameLn()));
+        System.out.println("Сортировка в возрастающем порядке по полю name,затем в убывающем порядке по полю priority,"
+                + " затем в обратном порядке по количеству символов в name:" + System.lineSeparator() + jobs);
         System.out.println();
-
     }
 }
