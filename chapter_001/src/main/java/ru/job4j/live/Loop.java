@@ -3,7 +3,7 @@ package ru.job4j.live;
 /**
  * @author Iuriy Gaydarzhi.
  * @since 16.06.2021
- * <p>
+ *
  * Демонстрация работы живого шаблона постфикса.
  */
 

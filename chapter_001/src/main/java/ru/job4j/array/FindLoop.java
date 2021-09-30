@@ -3,9 +3,6 @@ package ru.job4j.array;
 public class FindLoop {
     public static int indexOf(int[] data, int el, int start, int finish) {
 
-        /*
-            Если элемента нет в массиве, то возвращаем -1.
-         */
         int rst = -1;
         for (; start < finish; start++) {
             if (data[start] == el) {
@@ -18,9 +15,6 @@ public class FindLoop {
 
     public int indexOf(int[] data, int el) {
 
-        /*
-            Если элемента нет в массиве, то возвращаем -1.
-         */
         int rst = -1;
         int index;
         for (int i = 0; i < data.length; i++) {

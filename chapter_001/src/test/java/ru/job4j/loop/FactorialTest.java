@@ -6,8 +6,9 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 public class FactorialTest {
+
     @Test
-    public void whenCalculateFactorialForFiveThenOneHundreedTwenty() {
+    public void whenCalculateFactorialForFiveThenOneHundredTwenty() {
         Factorial factorial = new Factorial();
         int result = factorial.calc(5);
         assertThat(result, is(120));

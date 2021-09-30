@@ -9,8 +9,8 @@ import ru.job4j.tracker.Item;
  */
 
 public enum TrackerSingle {
-    /*
-        Здесь мы указываем перечисления.
+    /**
+     * Здесь мы указываем перечисления.
      */
     INSTANCE;
 
@@ -18,8 +18,8 @@ public enum TrackerSingle {
         TrackerSingle tsf = TrackerSingle.INSTANCE;
     }
 
-    /*
-        Конструкторы и методы.
+    /**
+     * Конструкторы и методы.
      */
     public Item add(Item model) {
         return model;
