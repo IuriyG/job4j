@@ -11,6 +11,7 @@ import java.util.function.Predicate;
  * @since 01.10.2021
  */
 public class SearchFolder {
+
     /**
      * Метод совершает поиск папки по предикату.
      *
