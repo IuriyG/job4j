@@ -14,16 +14,6 @@ public class Hero {
     }
 
     public static void main(String[] args) {
-        Hero hero2 = new Builder()
-                .buildLevel(28)
-                .buildName("Mirna")
-                .buildAgility(40)
-                .buildStraight(35)
-                .buildIntelligence(65)
-                .buildUltimate(false)
-                .buildGender("Female")
-                .build();
-        System.out.println(hero2);
 
         Hero hero = new Builder()
                 .buildLevel(30)
