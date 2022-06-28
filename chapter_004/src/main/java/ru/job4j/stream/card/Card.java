@@ -1,4 +1,4 @@
-package ru.job4j.stream;
+package ru.job4j.stream.card;
 
 
 import java.util.stream.Stream;
@@ -10,7 +10,13 @@ import java.util.stream.Stream;
  * @since 07.10.2021
  */
 public class Card {
+    /**
+     * Масть карты.
+     */
     private final Suit suit;
+    /**
+     * Значение карты.
+     */
     private final Value value;
 
     /**
@@ -37,7 +43,7 @@ public class Card {
     }
 
     /**
-     * Переопределённый метод.
+     * Переопределённый метод вывода строк в консоль.
      *
      * @return Возвращает строку.
      */

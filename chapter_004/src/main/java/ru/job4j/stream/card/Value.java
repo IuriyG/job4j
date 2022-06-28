@@ -1,4 +1,4 @@
-package ru.job4j.stream;
+package ru.job4j.stream.card;
 
 /**
  * Перечисления значений карт.
