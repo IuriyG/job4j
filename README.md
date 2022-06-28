@@ -464,11 +464,11 @@
 * [Список адресов.](https://github.com/IuriyG/job4j/commit/84586b027a55c3ddfeb7db706360ae4dbe190669)
 * [Уникальность элементов и сортировка.](https://github.com/IuriyG/job4j/commit/c5b0b5b9a7b44f030bfb52ad5f4dd9c3e23c9eca)
   
-  <details><summary>Генерирование колоды карт. FlatMap.</summary>
+* <details><summary>Генерирование колоды карт. FlatMap.</summary>
 
   * [Перечисления мастей карт.](https://github.com/IuriyG/job4j/blob/master/chapter_004/src/main/java/ru/job4j/stream/card/Suit.java)
   * [Перечисления значений карт.](https://github.com/IuriyG/job4j/blob/6e998f49fc/chapter_004/src/main/java/ru/job4j/stream/card/Value.java)
-  </details>
+   </details>
   
 * [Преобразование List в Map.](https://github.com/IuriyG/job4j/commit/71041489b3ba82fac161e1e08252fc5ea25f45c3)
 * [Преобразование матрицы чисел в список чисел.](https://github.com/IuriyG/job4j/commit/c955aca5e2ec287f3fdb78f24b5791ec321bdf45)
