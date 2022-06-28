@@ -8,19 +8,17 @@
 # <font size="10" color="#03A9F4" face="Arial">[Job4j](https://job4j.ru "Обучение и трудоустройство Java-программистов от Junior до Senior.")</font>
 
 Начал обучение в проекте Job4j!  
-Успешно
-окончил: <font size="3" color="#03A9F4" face="Arial">[Уровень "Стажер"!](https://job4j.ru/courses/java_with_zero_to_job.html "Уровень <Стажер>")</font>
-К сожалению пришлось сделать длительную паузу, но Я вернусь!
+Успешно окончил: <font size="3" color="#03A9F4" face="Comic sans MS">[Уровень "Стажер."](https://job4j.ru/courses/java_with_zero_to_job.html "Уровень <Стажер>")</font>
 Спустя некоторое время обновился курс, пришлось выполнить новоявленные задачи!
 
-<font size="3" color="#F5F5F5" face="Arial"> <b>Описание курса: </b> </font>
+<font size = "4" color = "#DEDEDE" face = "Comic sans MS">Описание курса: </font>
 Ты научишься использовать инструмент сборки Maven. Будешь писать модульные тесты и оформлять свой код, 
 так как это делают профессионалы. Познакомишься с базовыми принципами построения программы через 
 объектно-ориентированный подход. Научишься использовать Java Collections Frameworks. 
 Весь код будешь заливать на GitHub. Займешься рефакторингом кода с применением шаблонов проектирования. 
 После этого уровня ты сможешь претендовать на позиции Стажер Java разработчик.
 
-## <font size="8" color="#03A9F4" face="Arial">[Часть 1. Базовый синтаксис.](https://github.com/IuriyG/job4j/tree/master/chapter_001/src/main/java/ru/job4j) </font>
+## <font size="8" color="#03A9F4" face="Comic sans MS">[Часть 1. Базовый синтаксис.](https://github.com/IuriyG/job4j/tree/master/chapter_001/src/main/java/ru/job4j) </font>
 
   <details><summary>1. Первая программа.</summary>
 
@@ -31,18 +29,18 @@
 * Генерация публичного и закрытого ключа для github.
 * Импорт проекта в IDEA.
 * Создание репозитория и привязка к исходному коду.
-* [Загрузка файлов на github.](https://github.com/IuriyG/job4j_elementary/blob/master/src/ru/job4j/Echo.java) 
+* [Загрузка файлов на github.](https://github.com/IuriyG/job4j_elementary/blob/master/src/ru/job4j/Echo.java)
 * [Фиксация изменений на github.](https://github.com/IuriyG/job4j_elementary/commit/94b8ddc702b079b0b7687626d9bc364a456204a3)
 * Кто такой - CI Бот?
 * [Разбор первой программы.](https://github.com/IuriyG/job4j/blob/master/chapter_001/src/main/java/Multiple.java)
 * Заголовок в файле java.
 * Процесс компиляции и запуска Java программы.
 * Checkstyle.
-        
+
   </details>
 
  <details><summary>2. Тип данных.</summary>
-  
+
 * Что такое переменная.
 * Определите тип данных для переменных.
 * Переменные.
@@ -58,6 +56,7 @@
 * [Площадь треугольника.](https://github.com/IuriyG/job4j/blob/master/chapter_001/src/main/java/ru/job4j/condition/TrgArea.java)
 * [String.](https://github.com/IuriyG/job4j/blob/b4b6e6c3fe3da680feb7254db157c3ec6443ee7a/chapter_001/src/main/java/ru/job4j/condition/Greeting.java)
 * Преобразование примитивных типов.
+
 </details>
 
 <details><summary>3. Тестирование.</summary>
@@ -69,7 +68,7 @@
 * [Тесты для задачи "идеальный вес".](https://github.com/IuriyG/job4j/blob/master/chapter_001/src/test/java/ru/job4j/calculator/FitTest.java)
 * [Тесты для расстояния между точками.](https://github.com/IuriyG/job4j/blob/master/chapter_001/src/test/java/ru/job4j/condition/PointTest.java)
 * [Тесты для стороны прямоугольника.](https://github.com/IuriyG/job4j/blob/master/chapter_001/src/test/java/ru/job4j/condition/SqAreaTest.java)
-*  Аннотация @Test
+* Аннотация @Test
 
 </details>
 
@@ -94,6 +93,7 @@
 * [Отладка программы в IDEA.](https://github.com/IuriyG/job4j/commit/187733e95bb10eec59d20fde69cc0f413cc298ac)
 * [Switch.](https://github.com/IuriyG/job4j/commit/1020789372e19b29e75e21fadf6ec207270b74ed)
 * [Switch - matcher.](https://github.com/IuriyG/job4j/commit/e6dc3798a4e63a8d96735e25257934d2bcb0eb93)
+
 </details>
 
 <details><summary>5. Циклы.</summary>
@@ -111,6 +111,7 @@
 * Именование классов и переменных
 * [Крест в псевдографике.](https://github.com/IuriyG/job4j/commit/49ad9c502b2a9d450ef5fa015d4332a39341dc9a)
 * [Генерация конструкций в IDEA](https://github.com/IuriyG/job4j/commit/905e47d661ed1ba4fa26f7421f6c20965bda78c6)
+
 </details>
 
 <details><summary>6. Массивы.</summary>
@@ -147,6 +148,7 @@
 * [Выигрышные комбинации в сокобан.](https://github.com/IuriyG/job4j/commit/bf836ddca012ccb4e316e381dda75c3754b043b3)
 * [Дефрагментация массива.](https://github.com/IuriyG/job4j/commit/d30a78cb6d3992af065b7314548c66e247b6998a)
 * [Жадный алгоритм. Сдача в кофе машине.](https://github.com/IuriyG/job4j/commit/9aa8f11c61c8f5220d02329b524d67b2036128b1)
+
 </details>
 
 <details><summary>7. Контрольные вопросы и тестовые задания.</summary>
@@ -182,20 +184,23 @@
 
 * [Тестовое задание: сокобан.](https://github.com/IuriyG/games_oop_javafx/commit/372d19328e6dab204c496ff8c4871197c3c1fc35)
 * [Тестовое задание: объединить два массива.](https://github.com/IuriyG/job4j/commit/d9b0b7fc2b4ae21c9a59ac181ad2b4593cad70ab)
+
 </details>
   </details>
 
-## <font size="8" color="#03A9F4" face="Arial">[Часть 2. ООП.](https://github.com/IuriyG/job4j/tree/master/chapter_002/src/test/java/ru/job4j) </font>
+## <font size="8" color="#03A9F4" face="Comic sans MS">[Часть 2. ООП.](https://github.com/IuriyG/job4j/tree/master/chapter_002/src/test/java/ru/job4j) </font>
 
 <details><summary>0. Техническое задание. Tracker.</summary>
 
- * Техническое задание - проект Tracker.
- * [Репозиторий под проект Tracker.](https://github.com/IuriyG/job4j_tracker)
+* Техническое задание - проект Tracker.
+* [Репозиторий под проект Tracker.](https://github.com/IuriyG/job4j_tracker)
+
  </details>
 
 <details><summary>1. Качество кода.</summary>
 
 * Чтение кода и базовые ошибки.
+
 </details>
 
 <details><summary>2. Автоматическая сборка, Maven.</summary>
@@ -204,6 +209,7 @@
 * Структура Maven проекта.
 * Подключение библиотек.
 * [Checkstyle с Maven.](https://github.com/IuriyG/job4j/blob/94240f82bd0c55d5887edc8e915b1c5664a0a6ba/pom.xml#L96)
+
 </details>
 
 <details><summary>3. Классы и объекты.</summary>
@@ -224,16 +230,19 @@
 * [Расстояние между точками в трехмерном пространстве.](https://github.com/IuriyG/job4j/commit/6f3e96c24e7fb61a673ff0d23fd25d3f4226cd81)
 * Локальные переменные и поля.
 * Зона видимости переменных.
+
 </details>
 
 <details><summary>4. Наследование</summary>
 
 * Что такое наследование.
 * [Перегрузка конструктора.](https://github.com/IuriyG/job4j/commit/9fc99486238eb9f541e40d050681b54fede19231)
-* [Реализация профессий в коде.](https://github.com/IuriyG/job4j/commit/a94d74493931f67c96e3f6644cb375ca2e419256)
+* [Вызов конструктора родителя super(...)](https://github.com/IuriyG/job4j/commit/a94d74493931f67c96e3f6644cb375ca2e419256)
 * [Переопределение.](https://github.com/IuriyG/job4j/commit/779e88a94d371bf7489bb09fff635b75e7039dbc)
+* [Вызов переопределенного метода родителя - super.method ...](https://github.com/IuriyG/job4j/commit/4bebbd482be06c2f7f943738f6f8180c51c48889)
 * [Аннотация @Override.](https://github.com/IuriyG/job4j/commit/603496b9b6e260769c1fece04c1dafaec6f8344c)
 * [Date. Отображение даты.](https://github.com/IuriyG/job4j/commit/fd1805d7ed1143117ebcfb1676a02bbd1d2c4ee5)
+
 </details>
 
 <details><summary>5. Инкапсуляция.</summary>
@@ -246,9 +255,10 @@
 * Сравнение моделей. Метод equals.
 * [Tracker - хранилище.](https://github.com/IuriyG/job4j/commit/c7bf953bbff74de6fe6fe4dd37852f3916ffef4f)
 * Метод замены заявки. Tracker.replace.
-* Метод удаления заявки Tracker.delete. 
+* Метод удаления заявки Tracker.delete.
 * Что такое валидация?
 * toString.
+
 </details>
 
 <details><summary>6. Полиморфизм.</summary>
@@ -279,6 +289,7 @@
 * [Зависимость от System.out.](https://github.com/IuriyG/job4j/commit/e877671ad9a7999903961ba6c8a1ce2a43555bb9)
 * [Рефакторинг теста @Before @After.](https://github.com/IuriyG/job4j/commit/e877671ad9a7999903961ba6c8a1ce2a43555bb9)
 * [Тесты вывода на консоль в StartUI.](https://github.com/IuriyG/job4j/commit/8ea012a1855f3467c2498fc4e24af24be5a24cb1)
+
 </details>
 
 <details><summary>7. Исключения.</summary>
@@ -295,6 +306,7 @@
 * [Рефакторинг — Шаблон Декоратор для валидатора.](https://github.com/IuriyG/job4j/commit/90c056949c23e0d00597c0ee98730db96ccb6c07)
 * [Тест на ValidateInput.](https://github.com/IuriyG/job4j/blob/9851a28757/chapter_002/src/test/java/ru/job4j/tracker/ValidateInputTest.java)
 * [Замена if-else-throw на if-throw.](https://github.com/IuriyG/job4j/commit/33ebd679aea79b40c785708ed4e35b1d53023aca)
+
 </details>
 
 <details><summary>8. ООА\П.</summary>
@@ -303,6 +315,7 @@
 * [Singleton.](https://github.com/IuriyG/job4j/commit/90dcc8b9756fcb55781aef9b5bbc627a2bc6446e)
 * Шаблон фабричный метод.
 * [final.](https://github.com/IuriyG/job4j/commit/72ee09857833ab99461c0fab9bcd68b1a1d83839)
+
 </details>
 
 <details><summary>9. Контрольные вопросы.</summary>
@@ -339,12 +352,12 @@
         27. Что такое шаблоны проектирования?
         28. Объясните шаблон - декоратор.
         29. Объясните шаблон - стратегия.
-</details>
 
 * [Каркас шахматной доски.](https://github.com/IuriyG/games_oop_javafx/commit/650566718eec5f27b099292b417a82ac7751e26c)
 </details>
+</details>
 
-## <font size="8" color="#03A9F4" face="Arial">[Часть 3. Collections. Lite.](https://github.com/IuriyG/job4j/tree/master/chapter_003/src/main/java/ru/job4j) </font>
+## <font size="8" color="#03A9F4" face="Comic sans MS">[Часть 3. Collections. Lite.](https://github.com/IuriyG/job4j/tree/master/chapter_003/src/main/java/ru/job4j) </font>
 
 <details><summary>1. Коллекция List, ArrayList.</summary>
 
@@ -356,6 +369,7 @@
 * [Конвертация двумерного массива в ArrayList.](https://github.com/IuriyG/job4j/commit/5c9b3be314dbc1327f508bf3b7dbbca824b5a404)
 * [Конвертация листа массивов в один лист Integer.](https://github.com/IuriyG/job4j/commit/7ac5744e81874fd2da6ab775d5d703eaca5e002c)
 * [Изменить программу Tracker из 2-го модуля.](https://github.com/IuriyG/job4j/commit/145684edcb55b3303270de62f297c58c64916015)
+
 </details>
 
 <details><summary>2. Коллекция Set, HashSet.</summary>
@@ -364,6 +378,7 @@
 * [Уникальные задачи.](https://github.com/IuriyG/job4j/commit/8beb21c9c02138c257d97982398d0363dddabfb9)
 * [Идентичные тексты.](https://github.com/IuriyG/job4j/commit/9229286d94300a61919c6e3c7db3c2aac78927be)
 * [Модели данных и HashSet.](https://github.com/IuriyG/job4j/commit/7a3d25c9f6fa830ebf22fd2dc8f343a88cff80ed)
+
 </details>
 
 <details><summary>3. Map. HashMap. LinkedHashMap.</summary>
@@ -372,6 +387,7 @@
 * [Паспорт и жители.](https://github.com/IuriyG/job4j/commit/1f020fce49efa24efee4d3f51d35bf8b84af8cec)
 * [Преобразования List в Map.](https://github.com/IuriyG/job4j/commit/f92c535809b4822eb49b4480f57fab1e2cc9b9e1)
 * [ Банковские переводы.](https://github.com/IuriyG/job4j/commit/0fa1d13f16cdb422ad3292d4253b40013d79a035)
+
 </details>
 
 <details> <summary>4. Сортировка.</summary>
@@ -381,6 +397,7 @@
 * [Комбинированный компаратор.](https://github.com/IuriyG/job4j/commit/464b72b4ff59ab140d195c1d93c641b6c9555e14)
 * [Компаратор для строк.](https://github.com/IuriyG/job4j/commit/ccbd973c0b7e07a771bee830c2d58587280b6346)
 * [Сортировка номера.](https://github.com/IuriyG/job4j/commit/b605b190fa209011396122f7fba9e2cf5b096721)
+
 </details>
 
 <details> <summary>5. Инструменты.</summary>
@@ -389,6 +406,7 @@
 * [Travis CI.](https://github.com/IuriyG/job4j/commit/774580d0f879bbc782a23da2db83d964fdf09145)
 * [Что такое JavaDoc.](https://github.com/IuriyG/job4j/commit/a0e8f6d038ecff9538e634f67c93783767e19dd1)
 * [Генерация документации по JavaDoc.](https://github.com/IuriyG/job4j/commit/81e9d2bf0569ee369e08a7811d9c917b7efcf34e)
+
 </details>
 
 <details> <summary>6. Контрольные вопросы.</summary>
@@ -417,9 +435,10 @@
   </details>
 
 * [Отсортировать департаменты.](https://github.com/IuriyG/job4j/commit/488fc718ba8cbbd07902e9062e1647815d1142cd)
+
 </details>
 
-## <font size="8" color="#03A9F4" face="Arial">[Часть 4. FP, Lambda, Stream API.](https://github.com/IuriyG/job4j/tree/master/chapter_004/src/main/java/ru/job4j) </font>
+## <font size="8" color="#03A9F4" face="Comic sans MS">[Часть 4. FP, Lambda, Stream API.](https://github.com/IuriyG/job4j/tree/master/chapter_004/src/main/java/ru/job4j) </font>
 
 <details><summary>1. Lambda.</summary>
 
@@ -434,6 +453,7 @@
 * [Подсчет функции в диапазоне.](https://github.com/IuriyG/job4j/commit/319ebd6d8addc257e38346cbf80af3f4f0cbaf37)
 * [Функции высшего порядка.](https://github.com/IuriyG/job4j/commit/5dfd713be88f9bdcb926fea76e2fcfa598934ee4)
 * FP - функциональное программирование.
+
 </details>
 
 <details><summary>2. Stream API. </summary>
@@ -443,18 +463,25 @@
 * [Фильтрация учеников.](https://github.com/IuriyG/job4j/commit/d9e6868ca7f4e9b6b65352a388207d906bf6c9d6)
 * [Список адресов.](https://github.com/IuriyG/job4j/commit/84586b027a55c3ddfeb7db706360ae4dbe190669)
 * [Уникальность элементов и сортировка.](https://github.com/IuriyG/job4j/commit/c5b0b5b9a7b44f030bfb52ad5f4dd9c3e23c9eca)
+  
+  <details><summary>Генерирование колоды карт. FlatMap.</summary>
+
+  * [Перечисления мастей карт.](https://github.com/IuriyG/job4j/blob/master/chapter_004/src/main/java/ru/job4j/stream/card/Suit.java)
+  * [Перечисления значений карт.](https://github.com/IuriyG/job4j/blob/6e998f49fc/chapter_004/src/main/java/ru/job4j/stream/card/Value.java)
+  </details>
+  
 * [Преобразование List в Map.](https://github.com/IuriyG/job4j/commit/71041489b3ba82fac161e1e08252fc5ea25f45c3)
 * [Преобразование матрицы чисел в список чисел.](https://github.com/IuriyG/job4j/commit/c955aca5e2ec287f3fdb78f24b5791ec321bdf45)
 
 * <details><summary>Тестовое задание из модуля коллекции Lite переделать на Stream API.</summary>
 
-  * [Метод findByPassport();](https://github.com/IuriyG/job4j/commit/bd4f8205e019d33a14387f7b7a119b746922ee71)
-  * [Метод findByRequisite();](https://github.com/IuriyG/job4j/commit/5ab9bd60f857501a7f2c5df919ab3d36e172164c)
-
-</details>
+   * [Метод findByPassport();](https://github.com/IuriyG/job4j/commit/bd4f8205e019d33a14387f7b7a119b746922ee71)
+   * [Метод findByRequisite();](https://github.com/IuriyG/job4j/commit/5ab9bd60f857501a7f2c5df919ab3d36e172164c)
+  </details>
 
 * [Перенос методов в Stream API.](https://github.com/IuriyG/job4j/commit/56f1dae4b1045665b46882ff639b063681eedb07)
 * [Шаблоны проектирования в Stream API.](https://github.com/IuriyG/job4j/commit/23b306cf5500455d33dcc61f2bf299e0c80b140a)
+
 </details>
 
 <details><summary>3. Улучшенное Java API.</summary>
@@ -465,7 +492,6 @@
 * [Optional в банковских переводах.](https://github.com/IuriyG/job4j/commit/6a7a851ef7cc2e6fd40f9eeeddfebd2847e58a5e)
 * [Optional в Stream API.](https://github.com/IuriyG/job4j/commit/31b49473f8252b3b04409a136bd78ad6e8d44341)
 * [Collection API Улучшения.](https://github.com/IuriyG/job4j/commit/afbf9d97f4d3cd638a4febb8aab5d940921ec883)
-
 </details>
 
 <details><summary>4. Экзамен. Lambda, Stream API, JDK Features.</summary>
@@ -504,9 +530,11 @@
   </details>
 
 * [Реализовать класс для подсчета статистики по аттестатам учеников.](https://github.com/IuriyG/job4j/commit/7cd2f583a11afe8e29fabdb38bcefcbe33a69220)
+
  </details>
 
 <details><summary>5. Тестовое задание после прохождения курса.</summary>
 
 * [EasyStream.](https://github.com/IuriyG/job4j/commit/cf76ef208621b688008f348c676145b769e68438)
+
 </details>
