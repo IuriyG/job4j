@@ -1,32 +1,30 @@
 package ru.job4j.condition;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
+
 
 public class DummyBotTest {
     @Test
     public void whenGreetBot() {
         assertThat(
-                DummyBot.answer("Привет, Бот."),
-                is("Привет, умник.")
-        );
+                DummyBot.answer("Привет, Бот."))
+                .isEqualTo("Привет, умник."
+                );
     }
 
     @Test
     public void whenByeBot() {
         assertThat(
-                DummyBot.answer("Пока."),
-                is("До скорой встречи.")
-        );
+                DummyBot.answer("Пока."))
+                .isEqualTo("До скорой встречи.");
     }
 
     @Test
     public void whenUnknownBot() {
         assertThat(
-                DummyBot.answer("Сколько будет 2 + 2?"),
-                is("Это ставит меня в тупик. Задайте другой вопрос.")
-        );
+                DummyBot.answer("Сколько будет 2 + 2?"))
+                .isEqualTo("Это ставит меня в тупик. Задайте другой вопрос.");
     }
 }

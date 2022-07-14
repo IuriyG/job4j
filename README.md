@@ -5,7 +5,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/iuriyg/codewars/badge)](https://www.codefactor.io/repository/github/iuriyg/job4j)
 [![codecov](https://codecov.io/gh/IuriyG/job4j/branch/master/graph/badge.svg)](https://codecov.io/gh/IuriyG/job4j)
 
-# <font size="10" color="#03A9F4" face="Arial">[Job4j](https://job4j.ru "Обучение и трудоустройство Java-программистов от Junior до Senior.")</font>
+# <font size="10" color="#03A9F4" face="Comic sans MS">[Job4j](https://job4j.ru "Обучение и трудоустройство Java-программистов от Junior до Senior.")</font>
 
 Начал обучение в проекте Job4j!  
 Успешно окончил: <font size="3" color="#03A9F4" face="Comic sans MS">[Уровень "Стажер."](https://job4j.ru/courses/java_with_zero_to_job.html "Уровень <Стажер>")</font>

@@ -1,9 +1,9 @@
 package ru.job4j.ex;
 
+import org.junit.Assert;
 import org.junit.Test;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author Iuriy Gaydarzhi.
@@ -15,6 +15,6 @@ public class FactTest {
     public void ifNLessThen0TheIAE() {
         Fact fact = new Fact();
         int rsl = fact.calc(-3);
-        assertThat(rsl, is(6));
+        assertEquals(rsl, 6);
     }
 }

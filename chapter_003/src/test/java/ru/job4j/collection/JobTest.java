@@ -1,11 +1,10 @@
 package ru.job4j.collection;
 
-import org.junit.Test;
 
-import java.util.*;
+import java.util.Comparator;
 
-import static org.hamcrest.Matchers.*;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.*;
 
 /**
  * 1. Для модели ru.job4j.collection.Job создайте 4 компаратора:
@@ -28,7 +27,7 @@ public class JobTest {
                 new Job("Fix bug", 0),
                 new Job("Fix bug", 1)
         );
-        assertThat(rsl, greaterThan(0));
+        assertThat(rsl).isGreaterThan(0);
     }
 
     /**
@@ -41,12 +40,12 @@ public class JobTest {
                 new Job("Impl task", 0),
                 new Job("Impl task", 1)
         );
-        assertThat(rsl, lessThan(0));
+        assertThat(rsl).isLessThan(0);
     }
 
     /**
      * Тест компаратора сортировки по убыванию по полю name, затем по возрастанию по полю priority,
-     * затем по возрастанию по количеству символов в  поле name.
+     * затем по возрастанию по количеству символов в поле name.
      **/
     @Test
     public void whenComparatorDescByNameAscByPriorityAscByNameLn() {
@@ -54,7 +53,7 @@ public class JobTest {
         int rsl = jobComparator.compare(
                 new Job("Fix bug", 4),
                 new Job("Fix bug", 4));
-        assertThat(rsl, is(0));
+        assertThat(rsl).isGreaterThan(0);
     }
 
     /**
@@ -66,7 +65,7 @@ public class JobTest {
         int rsl = jobComparator.compare(
                 new Job("Fix bugs", 4),
                 new Job("Reboot server", 4));
-        assertThat(rsl, greaterThan(0));
+        assertThat(rsl).isGreaterThan(0);
     }
 
     /**
@@ -76,7 +75,7 @@ public class JobTest {
     public void whenCompareAscAByName() {
         Comparator<Job> compareByName = new JobAscByName();
         int rsl = compareByName.compare(new Job("Petr", 32), new Job("Ivan", 31));
-        assertThat(rsl, greaterThan(0));
+        assertThat(rsl).isGreaterThan(0);
     }
 
     /**
@@ -86,7 +85,7 @@ public class JobTest {
     public void whenCompareDescByName() {
         Comparator<Job> compareDescByName = new JobDescByName();
         int rsl = compareDescByName.compare(new Job("Petr", 30), new Job("Ivan", 30));
-        assertThat(rsl, lessThan(0));
+        assertThat(rsl).isLessThan(0);
     }
 
     /**
@@ -96,7 +95,7 @@ public class JobTest {
     public void whenCompareAscByPriority() {
         Comparator<Job> compareByPriority = new JobAscByPriority();
         int rsl = compareByPriority.compare(new Job("Ivan", 31), new Job("Ivan", 33));
-        assertThat(rsl, lessThan(0));
+        assertThat(rsl).isLessThan(0);
     }
 
     /**
@@ -106,6 +105,6 @@ public class JobTest {
     public void whenCompareDescByPriority() {
         Comparator<Job> compareByPriority = new JobDescByPriority();
         int rsl = compareByPriority.compare(new Job("Ivan", 31), new Job("Ivan", 33));
-        assertThat(rsl, greaterThan(0));
+        assertThat(rsl).isGreaterThan(0);
     }
 }

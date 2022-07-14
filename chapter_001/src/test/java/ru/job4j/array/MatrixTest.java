@@ -1,9 +1,8 @@
 package ru.job4j.array;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class MatrixTest {
     @Test
@@ -14,7 +13,7 @@ public class MatrixTest {
                 {1, 2},
                 {2, 4}
         };
-        assertThat(table, is(expect));
+        assertThat(table).isEqualTo(expect);
     }
 
     @Test
@@ -28,7 +27,7 @@ public class MatrixTest {
                 {4, 8, 12, 16, 20},
                 {5, 10, 15, 20, 25},
         };
-        assertThat(table, is(expect));
+        assertThat(table).isEqualTo(expect);
     }
 
     @Test
@@ -46,6 +45,6 @@ public class MatrixTest {
                 {8, 16, 24, 32, 40, 48, 56, 64, 72},
                 {9, 18, 27, 36, 45, 54, 63, 72, 81},
         };
-        assertThat(table, is(expect));
+        assertThat(table).isEqualTo(expect);
     }
 }

@@ -5,8 +5,8 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertSame;
 
 /**
  * @author Iuriy Gaydarzhi.
@@ -19,7 +19,7 @@ public class DepartmentsTest {
         List<String> input = List.of("k1/sk1");
         List<String> expect = Arrays.asList("k1", "k1/sk1");
         List<String> result = Departments.fillGaps(input);
-        assertThat(result, is(expect));
+        assertEquals(result, expect);
     }
 
     @Test
@@ -27,7 +27,7 @@ public class DepartmentsTest {
         List<String> input = Arrays.asList("k1", "k1/sk1");
         List<String> expect = Arrays.asList("k1", "k1/sk1");
         List<String> result = Departments.fillGaps(input);
-        assertThat(result, is(expect));
+        assertEquals(result, expect);
     }
 
     @Test
@@ -35,7 +35,7 @@ public class DepartmentsTest {
         List<String> input = Arrays.asList("K2/SK1", "K2/SK1/SSK1", "K2");
         List<String> expect = Arrays.asList("K2", "K2/SK1", "K2/SK1/SSK1");
         List<String> result = Departments.fillGaps(input);
-        assertThat(result, is(expect));
+        assertEquals(result, expect);
     }
 
     @Test
@@ -43,7 +43,7 @@ public class DepartmentsTest {
         List<String> input = Arrays.asList("k1", "ssk1", "sk1");
         List<String> expect = Arrays.asList("k1", "sk1", "ssk1");
         Departments.sortAsc(input);
-        assertThat(input, is(expect));
+        assertEquals(input, expect);
     }
 
     @Test
@@ -51,6 +51,6 @@ public class DepartmentsTest {
         List<String> input = Arrays.asList("sk1", "ssk1", "k2");
         List<String> expect = Arrays.asList("k2", "sk1", "ssk1");
         Departments.sortDesc(input);
-        assertThat(input, is(expect));
+        assertEquals(input, expect);
     }
 }

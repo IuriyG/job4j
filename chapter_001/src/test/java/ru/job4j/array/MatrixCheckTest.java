@@ -1,10 +1,8 @@
 package ru.job4j.array;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class MatrixCheckTest {
 
@@ -16,7 +14,7 @@ public class MatrixCheckTest {
                 {' ', ' ', ' '},
         };
         boolean result = MatrixCheck.monoHorizontal(input, 1);
-        assertThat(result, is(true));
+        assertThat(result).isTrue();
     }
 
     @Test
@@ -27,7 +25,7 @@ public class MatrixCheckTest {
                 {' ', 'X', ' '},
         };
         boolean result = MatrixCheck.monoHorizontal(input, 1);
-        assertThat(result, is(false));
+        assertThat(result).isFalse();
     }
 
     @Test
@@ -38,7 +36,7 @@ public class MatrixCheckTest {
                 {' ', ' ', 'X'},
         };
         boolean result = MatrixCheck.monoVertical(input, 2);
-        assertThat(result, is(true));
+        assertThat(result).isTrue();
     }
 
     @Test
@@ -49,7 +47,7 @@ public class MatrixCheckTest {
                 {' ', ' ', 'X'},
         };
         boolean result = MatrixCheck.monoVertical(input, 2);
-        assertThat(result, is(false));
+        assertThat(result).isFalse();
     }
 
     @Test
@@ -61,7 +59,7 @@ public class MatrixCheckTest {
         };
         char[] result = MatrixCheck.extractDiagonal(input);
         char[] expect = {'X', 'X', 'X'};
-        assertThat(result, is(expect));
+        assertThat(result).containsExactly(expect);
     }
 
     @Test
@@ -74,7 +72,7 @@ public class MatrixCheckTest {
                 {' ', ' ', 'X', ' ', ' '},
         };
         boolean result = MatrixCheck.isWin(input);
-        assertThat(result, is(true));
+        assertThat(result).isTrue();
     }
 
     @Test
@@ -87,7 +85,7 @@ public class MatrixCheckTest {
                 {' ', ' ', 'X', ' ', ' '},
         };
         boolean result = MatrixCheck.isWin(input);
-        assertThat(result, is(false));
+        assertThat(result).isFalse();
     }
 
     @Test
@@ -100,7 +98,7 @@ public class MatrixCheckTest {
                 {' ', ' ', 'X', ' ', ' '},
         };
         boolean result = MatrixCheck.isWin(input);
-        assertThat(result, is(true));
+        assertThat(result).isTrue();
     }
 
     @Test
@@ -112,7 +110,7 @@ public class MatrixCheckTest {
         };
         char[] result = MatrixCheck.extractDiagonal(input);
         char[] expected = {'1', '1', '1'};
-        Assert.assertArrayEquals(expected, result);
+        assertThat(expected).containsExactly(result);
     }
 
     @Test
@@ -124,6 +122,6 @@ public class MatrixCheckTest {
         };
         char[] result = MatrixCheck.extractDiagonal(input);
         char[] expected = {'X', 'Y', 'Z'};
-        Assert.assertArrayEquals(expected, result);
+        assertThat(expected).containsExactly(result);
     }
 }

@@ -1,27 +1,24 @@
 package ru.job4j.stragery;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.StringJoiner;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class PaintTest {
     private final PrintStream stdout = System.out;
     private final ByteArrayOutputStream out = new ByteArrayOutputStream();
 
-    @Before
+    @BeforeEach
     public void loadOutput() {
         System.out.println("execute before method");
         System.setOut(new PrintStream(this.out));
     }
 
-    @After
+    @AfterEach
     public void backOutput() {
         System.setOut(this.stdout);
         System.out.println("execute after method");
@@ -30,30 +27,26 @@ public class PaintTest {
     @Test
     public void whenDrawSquare() {
         new Paint().draw(new Square());
-        assertThat(
-                this.out.toString(),
-                is(new StringJoiner(System.lineSeparator())
-                        .add("+ + + +")
-                        .add("+ + + +")
-                        .add("+ + + +")
-                        .add("+ + + +")
-                        .toString()
-                )
+        assertThat(this.out.toString()).contains(new StringJoiner(System.lineSeparator())
+                .add("+ + + +")
+                .add("+ + + +")
+                .add("+ + + +")
+                .add("+ + + +")
+                .toString()
+
         );
     }
 
     @Test
     public void whenDrawTriangle() {
         new Paint().draw(new Triangle());
-        assertThat(
-                this.out.toString(),
-                is(new StringJoiner(System.lineSeparator())
-                        .add("   +")
-                        .add("  +++")
-                        .add(" +++++")
-                        .add("+++++++")
-                        .toString()
-                )
+        assertThat(this.out.toString()).isEqualTo(new StringJoiner(System.lineSeparator())
+                .add("   +")
+                .add("  +++")
+                .add(" +++++")
+                .add("+++++++")
+                .toString()
+
         );
     }
 }

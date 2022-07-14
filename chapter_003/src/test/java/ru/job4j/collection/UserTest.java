@@ -1,13 +1,13 @@
 package ru.job4j.collection;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
-import static org.hamcrest.Matchers.greaterThan;
-import static org.junit.Assert.*;
+import static org.assertj.core.api.Assertions.assertThat;
+
 
 public class UserTest {
 
@@ -20,8 +20,8 @@ public class UserTest {
         users.add(new User("Petr", 32));
         users.add(new User("Ivan", 31));
         Iterator<User> it = users.iterator();
-        assertEquals(it.next(), (new User("Ivan", 31)));
-        assertEquals(it.next(), (new User("Petr", 32)));
+        assertThat(it.next()).isEqualByComparingTo(new User("Ivan", 31));
+        assertThat(it.next()).isEqualByComparingTo(new User("Petr", 32));
     }
 
     /**
@@ -30,6 +30,6 @@ public class UserTest {
     @Test
     public void whenComparePertVSIvan() {
         int rsl = new User("Petr", 32).compareTo(new User("Ivan", 31));
-        assertThat(rsl, greaterThan(0));
+        assertThat(rsl).isGreaterThan(0);
     }
 }

@@ -1,9 +1,8 @@
 package ru.job4j.array;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class FindLoopTest {
 
@@ -14,7 +13,7 @@ public class FindLoopTest {
         int value = 5;
         int result = find.indexOf(input, value);
         int expect = 0;
-        assertThat(result, is(expect));
+        assertThat(result).isEqualTo(expect);
     }
 
     @Test
@@ -24,7 +23,7 @@ public class FindLoopTest {
         int value = 10;
         int result = find.indexOf(input, value);
         int expect = 1;
-        assertThat(result, is(expect));
+        assertThat(result).isEqualTo(expect);
     }
 
     @Test
@@ -34,7 +33,7 @@ public class FindLoopTest {
         int value = 9;
         int result = find.indexOf(input, value);
         int expect = -1;
-        assertThat(result, is(expect));
+        assertThat(result).isEqualTo(expect);
     }
 
     @Test
@@ -45,7 +44,7 @@ public class FindLoopTest {
         int finish = 4;
         int result = FindLoop.indexOf(input, value, start, finish);
         int expect = 3;
-        assertThat(result, is(expect));
+        assertThat(result).isEqualTo(expect);
     }
 
     @Test
@@ -56,6 +55,6 @@ public class FindLoopTest {
         int finish = 4;
         int result = FindLoop.indexOf(input, value, start, finish);
         int expect = -1;
-        assertThat(result, is(expect));
+        assertThat(result).isEqualTo(expect);
     }
 }

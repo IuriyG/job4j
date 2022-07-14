@@ -1,24 +1,22 @@
 package ru.job4j.stragery;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.StringJoiner;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
+
 
 public class SquareTest {
     @Test
     public void whenDrawSquare() {
-        assertThat(new Square().draw(),
-                is(new StringJoiner(System.lineSeparator())
-                        .add("+ + + +")
-                        .add("+ + + +")
-                        .add("+ + + +")
-                        .add("+ + + +")
-                        .toString()
-                )
+        assertThat(new Square().draw()).isEqualTo(new StringJoiner(System.lineSeparator())
+                .add("+ + + +")
+                .add("+ + + +")
+                .add("+ + + +")
+                .add("+ + + +")
+                .toString()
+
         );
     }
 
@@ -30,6 +28,6 @@ public class SquareTest {
                 .add("+ +   +")
                 .add("+ + + +")
                 .toString();
-        Assert.assertNotEquals(sj, new Square().draw());
+        assertThat(sj).isNotEqualTo(new Square().draw());
     }
 }

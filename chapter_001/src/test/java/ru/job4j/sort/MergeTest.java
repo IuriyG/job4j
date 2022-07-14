@@ -1,9 +1,8 @@
 package ru.job4j.sort;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class MergeTest {
     @Test
@@ -14,7 +13,7 @@ public class MergeTest {
                 new int[0],
                 new int[0]
         );
-        assertThat(result, is(expect));
+        assertThat(result).containsExactly(expect);
     }
 
     @Test
@@ -22,10 +21,10 @@ public class MergeTest {
         Merge algo = new Merge();
         int[] expect = {1, 2, 3, 4};
         int[] result = algo.merge(
-                new int[] {1, 2},
-                new int[] {3, 4}
+                new int[]{1, 2},
+                new int[]{3, 4}
         );
-        assertThat(result, is(expect));
+        assertThat(result).containsExactly(expect);
     }
 
     @Test
@@ -33,10 +32,10 @@ public class MergeTest {
         Merge algo = new Merge();
         int[] expect = {1, 2, 3, 3, 4};
         int[] result = algo.merge(
-                new int[] {1, 2, 3},
-                new int[] {3, 4}
+                new int[]{1, 2, 3},
+                new int[]{3, 4}
         );
-        assertThat(result, is(expect));
+        assertThat(result).containsExactly(expect);
     }
 
     @Test
@@ -44,10 +43,10 @@ public class MergeTest {
         Merge algo = new Merge();
         int[] expect = {1, 2, 3, 4, 4};
         int[] result = algo.merge(
-                new int[] {1, 2},
-                new int[] {3, 4, 4}
+                new int[]{1, 2},
+                new int[]{3, 4, 4}
         );
-        assertThat(result, is(expect));
+        assertThat(result).containsExactly(expect);
     }
 
     @Test
@@ -55,9 +54,9 @@ public class MergeTest {
         Merge algo = new Merge();
         int[] expect = {1, 2, 3, 4};
         int[] result = algo.merge(
-                new int[] {},
-                new int[] {1, 2, 3, 4}
+                new int[]{},
+                new int[]{1, 2, 3, 4}
         );
-        assertThat(result, is(expect));
+        assertThat(result).containsExactly(expect);
     }
 }

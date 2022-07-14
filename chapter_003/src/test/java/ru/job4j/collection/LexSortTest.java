@@ -4,8 +4,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * @author Iuriy Gaydarzhi.
@@ -26,6 +25,6 @@ public class LexSortTest {
                 "10. Task."
         };
         Arrays.sort(input, new LexSort());
-        assertThat(input, is(out));
+        assertThat(input).containsExactly(out);
     }
 }

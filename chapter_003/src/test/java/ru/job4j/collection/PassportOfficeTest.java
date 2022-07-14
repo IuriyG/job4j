@@ -2,9 +2,8 @@ package ru.job4j.collection;
 
 import org.junit.Test;
 
-import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertSame;
 
 /**
  * @author Iuriy Gaydarzhi.
@@ -17,7 +16,7 @@ public class PassportOfficeTest {
         Citizen citizen = new Citizen("2f44a", "Petr Arsentev");
         PassportOffice office = new PassportOffice();
         office.add(citizen);
-        assertThat(office.get(citizen.getPassport()), is(citizen));
+        assertSame(office.get(citizen.getPassport()), citizen);
     }
 
     @Test

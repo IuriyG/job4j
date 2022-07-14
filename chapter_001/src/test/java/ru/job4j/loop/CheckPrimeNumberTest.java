@@ -1,22 +1,21 @@
 package ru.job4j.loop;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class CheckPrimeNumberTest {
     @Test
     public void when5() {
         CheckPrimeNumber prime = new CheckPrimeNumber();
         boolean rsl = prime.check(5);
-        assertThat(rsl, is(true));
+        assertThat(rsl).isTrue();
     }
 
     @Test
     public void when4() {
         CheckPrimeNumber prime = new CheckPrimeNumber();
         boolean rsl = prime.check(4);
-        assertThat(rsl, is(false));
+        assertThat(rsl).isFalse();
     }
 }

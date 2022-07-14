@@ -1,9 +1,8 @@
 package ru.job4j.array;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class SquareTest {
     @Test
@@ -12,7 +11,7 @@ public class SquareTest {
         Square square = new Square();
         int[] rst = square.calculate(bound);
         int[] expect = new int[]{1, 4, 9};
-        assertThat(rst, is(expect));
+        assertThat(rst).containsExactly(expect);
     }
 
     @Test
@@ -21,7 +20,7 @@ public class SquareTest {
         Square square = new Square();
         int[] rst = square.calculate(bound);
         int[] expect = new int[]{1, 4, 9, 16, 25};
-        assertThat(rst, is(expect));
+        assertThat(rst).containsExactly(expect);
     }
 
     @Test
@@ -30,6 +29,6 @@ public class SquareTest {
         Square square = new Square();
         int[] rst = square.calculate(bound);
         int[] expect = new int[]{1, 4, 9, 16, 25, 36, 49, 64, 81};
-        assertThat(rst, is(expect));
+        assertThat(rst).containsExactly(expect);
     }
 }

@@ -1,24 +1,21 @@
 package ru.job4j.stragery;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.StringJoiner;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
+
 
 public class TriangleTest {
     @Test
     public void whenDrawTriangle() {
-        assertThat(new Triangle().draw(),
-                is(new StringJoiner(System.lineSeparator())
-                        .add("   +")
-                        .add("  +++")
-                        .add(" +++++")
-                        .add("+++++++")
-                        .toString()
-                )
+        assertThat(new Triangle().draw()).isEqualTo(new StringJoiner(System.lineSeparator())
+                .add("   +")
+                .add("  +++")
+                .add(" +++++")
+                .add("+++++++")
+                .toString()
         );
     }
 
@@ -30,7 +27,7 @@ public class TriangleTest {
                 .add(" +++++")
                 .add("+++ +++")
                 .toString();
-        Assert.assertNotEquals(sj, new Triangle().draw());
+        assertThat(sj).isNotEqualTo(new Triangle().draw());
     }
 
 }

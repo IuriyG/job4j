@@ -1,9 +1,8 @@
 package ru.job4j.array;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.*;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
 
 public class SortSelectedTest {
     @Test
@@ -11,7 +10,7 @@ public class SortSelectedTest {
         int[] input = new int[]{3, 4, 1, 2, 5};
         int[] result = SortSelected.sort(input);
         int[] expect = new int[]{1, 2, 3, 4, 5};
-        assertThat(result, is(expect));
+        assertThat(result).containsExactly(expect);
     }
 
     @Test
@@ -19,6 +18,6 @@ public class SortSelectedTest {
         int[] input = new int[]{31, 3, 7};
         int[] result = SortSelected.sort(input);
         int[] expect = new int[]{3, 7, 31};
-        assertThat(result, is(expect));
+        assertThat(result).containsExactly(expect);
     }
 }

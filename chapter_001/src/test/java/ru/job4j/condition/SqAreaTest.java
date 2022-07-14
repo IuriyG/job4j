@@ -1,9 +1,9 @@
 package ru.job4j.condition;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
+
 
 public class SqAreaTest {
 
@@ -13,7 +13,7 @@ public class SqAreaTest {
         int p = 4;
         int expected = 1;
         int s = SqArea.square(p, k);
-        assertThat(s, is(expected));
+        assertThat(s).isEqualTo(expected);
     }
 
     @Test
@@ -22,6 +22,6 @@ public class SqAreaTest {
         int p = 6;
         int expected = 2;
         int s = SqArea.square(p, k);
-        assertThat(s, is(expected));
+        assertThat(s).isEqualTo(expected);
     }
 }
