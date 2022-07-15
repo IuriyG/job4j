@@ -8,8 +8,9 @@
 # <font size="10" color="#03A9F4" face="Comic sans MS">[Job4j](https://job4j.ru "Обучение и трудоустройство Java-программистов от Junior до Senior.")</font>
 
 Начал обучение в проекте Job4j!  
-Успешно окончил: <font size="3" color="#03A9F4" face="Comic sans MS">[Уровень "Стажер."](https://job4j.ru/courses/java_with_zero_to_job.html "Уровень <Стажер>")</font>
-Спустя некоторое время обновился курс, пришлось выполнить новоявленные задачи!
+И успешно окончил: <font size="3" color="#03A9F4" face="Comic sans MS">[Уровень "Стажер."](https://job4j.ru/courses/java_with_zero_to_job.html "Уровень <Стажер>")</font>
+Курс состоит из 4 блоков, состав приведен ниже.
+Курс периодически обновляется, по возможности решаю новые задачи и добавляю!
 
 <font size = "4" color = "#DEDEDE" face = "Comic sans MS">Описание курса: </font>
 Ты научишься использовать инструмент сборки Maven. Будешь писать модульные тесты и оформлять свой код, 
