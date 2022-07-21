@@ -1,7 +1,7 @@
-# используем язык java. Travis CI поддерживает другие языки тоже.
+# Используем язык java. Travis CI поддерживает другие языки тоже.
 language: java
 jdk:
-  - openjdk14
+  - openjdk17
 
 # используем режим обычного пользователя для сборки проекта.
 sudo: false
@@ -20,6 +20,3 @@ notifications:
     on_failure: always # default: always
 
     # ключ с сайта https://codecov.io
-    env:
-    global:
-      - CODECOV_TOKEN="7a39ffb2-5b96-46b2-ba7d-9454183afca7"
