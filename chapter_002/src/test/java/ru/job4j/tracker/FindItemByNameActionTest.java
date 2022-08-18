@@ -7,8 +7,7 @@ import java.io.PrintStream;
 import java.time.format.DateTimeFormatter;
 import java.util.StringJoiner;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertEquals;
 
 public class FindItemByNameActionTest {
 
@@ -32,7 +31,7 @@ public class FindItemByNameActionTest {
                         + ", Name: " + item.getName()
                         + "}" + System.lineSeparator())
                 .toString();
-        assertThat(out.toString(), is(expect));
+        assertEquals(out.toString(), expect);
         System.setOut(def);
     }
 }

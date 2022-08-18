@@ -6,8 +6,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.time.format.DateTimeFormatter;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertEquals;
 
 public class ShowAllItemActionTest {
 
@@ -27,7 +26,7 @@ public class ShowAllItemActionTest {
                 + currentDateTimeFormat + ", Id: "
                 + item.getId() + ", Name: "
                 + item.getName() + "}" + System.lineSeparator();
-        assertThat(out.toString(), is(expected));
+        assertEquals(out.toString(), expected);
         System.setOut(def);
     }
 }

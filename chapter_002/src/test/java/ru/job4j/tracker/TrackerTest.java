@@ -6,9 +6,8 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.nullValue;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 public class TrackerTest {
     /**
@@ -19,7 +18,7 @@ public class TrackerTest {
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("test1"));
         Item result = tracker.findById(item.getId());
-        assertThat(result.getName(), is(item.getName()));
+        assertEquals(result.getName(), item.getName());
     }
 
     /**
@@ -40,16 +39,12 @@ public class TrackerTest {
 
     /**
      * Тест для метода findByName. Метод возвращает найденный в коллекции элемент по входящему аргументу.
-     *
      */
     @Test
     public void whenFindByNameReturnCopyArray() {
         Tracker tracker = new Tracker();
         Item one = tracker.add(new Item("test1"));
-        Item two = tracker.add(new Item(null));
         Item three = tracker.add(new Item("test1"));
-        Item four = tracker.add(new Item("test3"));
-        Item five = tracker.add(new Item(null));
         List<Item> expected = new ArrayList<>();
         expected.add(one);
         expected.add(three);
@@ -62,12 +57,8 @@ public class TrackerTest {
     @Test
     public void whenFindByIdIsTrue() {
         Tracker tracker = new Tracker();
-        Item item = tracker.add(new Item("test1"));
-        Item item2 = tracker.add(new Item(null));
         Item item3 = tracker.add(new Item("test2"));
-        Item item4 = tracker.add(new Item("test3"));
-        Item item5 = tracker.add(new Item(null));
-        assertThat(tracker.findById(item3.getId()), is(item3));
+        assertEquals(tracker.findById(item3.getId()), item3);
     }
 
     /**
@@ -76,9 +67,7 @@ public class TrackerTest {
     @Test
     public void whenFindByIdIsFalse() {
         Tracker tracker = new Tracker();
-        Item item = tracker.add(new Item("test1"));
-        Item item2 = tracker.add(new Item(null));
         Item item3 = new Item("test2");
-        assertThat(tracker.findById(item3.getId()), is(nullValue()));
+        assertNull(tracker.findById(item3.getId()));
     }
 }

@@ -2,10 +2,11 @@ package ru.job4j.tracker;
 
 import org.junit.Test;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 
 public class ItemTest {
@@ -14,7 +15,7 @@ public class ItemTest {
      * Тест использует переопределенный компаратор ItemDescendingSortByName.
      * Метод демонстрирует сортировку по возрастанию.
      */
-   @Test
+    @Test
     public void itemSortAscending() {
 
         Tracker tracker = new Tracker();
@@ -28,7 +29,7 @@ public class ItemTest {
         list.add(four);
 
         list.sort(new ItemSortAscendingByName());
-        assertThat(list, is(Arrays.asList(one, three, four)));
+        assertEquals(list, Arrays.asList(one, three, four));
     }
 
     /**
@@ -49,6 +50,6 @@ public class ItemTest {
         list.add(four);
 
         list.sort(new ItemDescendingSortByName());
-        assertThat(list, is(Arrays.asList(four, three, one)));
+        assertEquals(list, Arrays.asList(four, three, one));
     }
 }
