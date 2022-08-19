@@ -307,6 +307,7 @@
 * [Рефакторинг — Шаблон Декоратор для валидатора.](https://github.com/IuriyG/job4j/commit/90c056949c23e0d00597c0ee98730db96ccb6c07)
 * [Тест на ValidateInput.](https://github.com/IuriyG/job4j/blob/9851a28757/chapter_002/src/test/java/ru/job4j/tracker/ValidateInputTest.java)
 * [Замена if-else-throw на if-throw.](https://github.com/IuriyG/job4j/commit/33ebd679aea79b40c785708ed4e35b1d53023aca)
+* [Принципы раннего возврата и охранных выражений](https://github.com/IuriyG/job4j/commit/c00d4b8b556958e2a36c2bfb1c72f5fea4a0170b)
 
 </details>
 
