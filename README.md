@@ -1,7 +1,6 @@
 [![Build Status](https://travis-ci.com/IuriyG/job4j.svg?branch=master)](https://travis-ci.org/IuriyG/job4j)
-[![jdk14](https://img.shields.io/badge/JDK-14-blue.svg)](http://jdk.java.net/14/)
+[![jdk17](https://img.shields.io/badge/JDK-17-blue.svg)](http://jdk.java.net/17/)
 ![GitHub top language](https://img.shields.io/github/languages/top/IuriyG/job4j)
-![Lines of code](https://img.shields.io/tokei/lines/github/IuriyG/job4j)
 [![CodeFactor](https://www.codefactor.io/repository/github/iuriyg/codewars/badge)](https://www.codefactor.io/repository/github/iuriyg/job4j)
 [![codecov](https://codecov.io/gh/IuriyG/job4j/branch/master/graph/badge.svg)](https://codecov.io/gh/IuriyG/job4j)
 
@@ -10,7 +9,7 @@
 Начал обучение в проекте Job4j!  
 И успешно окончил: <font size="3" color="#03A9F4" face="Comic sans MS">[Уровень "Стажер."](https://job4j.ru/courses/java_with_zero_to_job.html "Уровень <Стажер>")</font>
 Курс состоит из 4 блоков, состав приведен ниже.
-Курс периодически обновляется, по возможности решаю новые задачи и добавляю!
+Курс периодически обновляется, по возможности решаю новые задачи и добавляю! В некоторых первых коммитах могут отсутствовать JavaDoc, но они добавляются в следующих, после проверки ментором решения задачи.  
 
 <font size = "4" color = "#DEDEDE" face = "Comic sans MS">Описание курса: </font>
 Ты научишься использовать инструмент сборки Maven. Будешь писать модульные тесты и оформлять свой код, 
