@@ -37,21 +37,17 @@ public class AnalyzeByMap {
     }
 
     public static List<Label> averageScoreBySubject(List<Pupil> pupils) {
-        int count = 0, num = 0;
         List<Label> ll = new ArrayList<>();
         Map<String, Integer> map = new LinkedHashMap<>();
         for (Pupil pupil : pupils) {
             for (Subject subject : pupil.subjects()) {
                 map.computeIfPresent(subject.name(), (s, integer) -> (integer + subject.score()));
                 map.putIfAbsent(subject.name(), subject.score());
-                count++;
             }
-            num = count;
-            count = 0;
         }
+        System.out.println("map.size() = " + map.size());
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
-            ll.add(count, new Label(entry.getKey(), ((double) entry.getValue()) / num));
-            count++;
+            ll.add(new Label(entry.getKey(), ((double) entry.getValue()) / map.size()));
         }
         return ll;
     }
