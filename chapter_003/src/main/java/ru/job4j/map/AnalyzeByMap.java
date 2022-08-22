@@ -3,11 +3,19 @@ package ru.job4j.map;
 import java.util.*;
 
 /**
+ * Класс реализует подсчет статистики по аттестатам учеников.
+ *
  * @author Iuriy Gaydarzhi.
  * @since 21.07.2022
  */
 public class AnalyzeByMap {
 
+    /**
+     * Метод вычисляет общий средний балл всех учеников.
+     *
+     * @param pupils Принимает объект {@link Pupil}.
+     * @return Средний бал.
+     */
     public static double averageScore(List<Pupil> pupils) {
         double rsl = 0;
         int count = 0;
@@ -20,6 +28,12 @@ public class AnalyzeByMap {
         return rsl / count;
     }
 
+    /**
+     * Метод вычисляет средний балл по каждому ученику.
+     *
+     * @param pupils Принимает объект {@link Pupil}.
+     * @return Возвращает список из объектов {@link Label} (фамилию ученика и средний балл).
+     */
     public static List<Label> averageScoreByPupil(List<Pupil> pupils) {
         List<Label> ll = new ArrayList<>();
         double sum = 0;
@@ -36,6 +50,12 @@ public class AnalyzeByMap {
         return ll;
     }
 
+    /**
+     * Метод вычисляет средний балл по каждому предмету.
+     *
+     * @param pupils Принимает объект {@link Pupil}.
+     * @return Возвращает список из объектов {@link Label} (название предмета и средний балл).
+     */
     public static List<Label> averageScoreBySubject(List<Pupil> pupils) {
         List<Label> ll = new ArrayList<>();
         Map<String, Integer> map = new LinkedHashMap<>();
@@ -52,6 +72,13 @@ public class AnalyzeByMap {
         return ll;
     }
 
+    /**
+     * Метод возвращает лучшего ученика.
+     * Лучшим считается ученик с наибольшим суммарным баллом по всем предметам.
+     *
+     * @param pupils Принимает объект {@link Pupil}.
+     * @return Возвращает объект {@link Label} (фамилию ученика и суммарный балл).
+     */
     public static Label bestStudent(List<Pupil> pupils) {
         List<Label> ll = new ArrayList<>();
         double sum = 0;
@@ -66,6 +93,12 @@ public class AnalyzeByMap {
         return ll.get(0);
     }
 
+    /**
+     * Метод возвращает предмет с наибольшим суммарным баллом для всех студентов.
+     *
+     * @param pupils Принимает объект {@link Pupil}.
+     * @return Возвращает объект {@link Label} (фамилию предмета, сумма баллов каждого ученика по этому предмету).
+     */
     public static Label bestSubject(List<Pupil> pupils) {
         int count = 0;
         List<Label> ll = new ArrayList<>();
