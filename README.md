@@ -388,7 +388,8 @@
 * [Map, HashMap.](https://github.com/IuriyG/job4j/commit/dc4ed768ada2a384b373ad162f8f4a1f8968535a)
 * [Паспорт и жители.](https://github.com/IuriyG/job4j/commit/1f020fce49efa24efee4d3f51d35bf8b84af8cec)
 * [Преобразования List в Map.](https://github.com/IuriyG/job4j/commit/f92c535809b4822eb49b4480f57fab1e2cc9b9e1)
-* [ Банковские переводы.](https://github.com/IuriyG/job4j/commit/0fa1d13f16cdb422ad3292d4253b40013d79a035)
+* [Банковские переводы.](https://github.com/IuriyG/job4j/commit/0fa1d13f16cdb422ad3292d4253b40013d79a035)
+* [Аттестация](https://github.com/IuriyG/job4j/blob/944257fa4e3941faf9bef1160eb8873d731afe3d/chapter_003/src/main/java/ru/job4j/map/AnalyzeByMap.java)
 
 </details>
 
