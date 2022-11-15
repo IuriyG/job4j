@@ -240,6 +240,7 @@
 * [Перегрузка конструктора.](https://github.com/IuriyG/job4j/commit/9fc99486238eb9f541e40d050681b54fede19231)
 * [Вызов конструктора родителя super(...)](https://github.com/IuriyG/job4j/commit/a94d74493931f67c96e3f6644cb375ca2e419256)
 * [Переопределение.](https://github.com/IuriyG/job4j/commit/779e88a94d371bf7489bb09fff635b75e7039dbc)
+* [Сокрытие метода.](https://github.com/IuriyG/job4j/commit/54ba53af76f7e90a6741e4547a1c4003d31aea78)
 * [Вызов переопределенного метода родителя - super.method ...](https://github.com/IuriyG/job4j/commit/4bebbd482be06c2f7f943738f6f8180c51c48889)
 * [Аннотация @Override.](https://github.com/IuriyG/job4j/commit/603496b9b6e260769c1fece04c1dafaec6f8344c)
 * [Date. Отображение даты.](https://github.com/IuriyG/job4j/commit/fd1805d7ed1143117ebcfb1676a02bbd1d2c4ee5)
