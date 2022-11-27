@@ -42,6 +42,11 @@ class JavaNameValidatorTest {
     }
 
     @Test
+    void whenSecondNumberInValid() {
+        assertThat(isNameValid("f123")).isTrue();
+    }
+
+    @Test
     void whenFirstLatinUpperCaseIsInvalid() {
         assertThat(isNameValid("First")).isFalse();
     }
