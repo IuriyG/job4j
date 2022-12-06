@@ -1,17 +1,16 @@
 package ru.job4j.array;
 
 /**
- * The type Java name validator.
+ * Класс проверки валидности имен в языке Java.
  *
  * @author Iuriy Gaydarzhi.
  * @since 16.11.2022
  */
 public class JavaNameValidator {
+
     /**
-     * Is name valid boolean.
-     *
-     * @param name the name
-     * @return the boolean
+     * @param name Строка.
+     * @return false если не соответствует иначе true.
      */
     public static boolean isNameValid(String name) {
         if (name.isEmpty() || Character.isUpperCase(name.codePointAt(0))
@@ -29,30 +28,30 @@ public class JavaNameValidator {
     }
 
     /**
-     * Is special symbol boolean.
+     * Является ли символ символом доллара и нижнее подчеркивание.
      *
-     * @param code the code
-     * @return boolean
+     * @param code HTML-код символа.
+     * @return true если совпадает иначе false.
      */
     public static boolean isSpecialSymbol(int code) {
         return code == 36 || code == 95;
     }
 
     /**
-     * Is upper latin letter boolean.
+     * Является ли символ прописным латинским.
      *
-     * @param code the code
-     * @return the boolean
+     * @param code HTML-код символа.
+     * @return true если совпадает иначе false.
      */
     public static boolean isUpperLatinLetter(int code) {
         return code < 65 || code > 90;
     }
 
     /**
-     * Is lower latin letter boolean.
+     * Является ли символ строчным латинским.
      *
-     * @param code the code
-     * @return boolean
+     * @param code HTML-код символа.
+     * @return true если совпадает иначе false.
      */
     public static boolean isLowerLatinLetter(int code) {
         return code < 97 || code > 122;
