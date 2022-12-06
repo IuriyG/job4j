@@ -150,6 +150,7 @@
 * [Дефрагментация массива.](https://github.com/IuriyG/job4j/commit/d30a78cb6d3992af065b7314548c66e247b6998a)
 * [Жадный алгоритм. Сдача в кофе машине.](https://github.com/IuriyG/job4j/commit/9aa8f11c61c8f5220d02329b524d67b2036128b1)
 * [String - это массив](https://github.com/IuriyG/job4j/blob/a3819fb65e5f7ebd60eafc61b2c0eb903bbb318c/chapter_001/src/main/java/ru/job4j/array/JavaNameValidator.java)
+*  Горячие клавиши IDEA 
 
 </details>
 
