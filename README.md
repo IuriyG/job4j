@@ -55,7 +55,9 @@
 * [Стороны прямоугольника.](https://github.com/IuriyG/job4j/blob/master/chapter_001/src/main/java/ru/job4j/condition/SqArea.java)
 * [Площадь треугольника.](https://github.com/IuriyG/job4j/blob/master/chapter_001/src/main/java/ru/job4j/condition/TrgArea.java)
 * [String.](https://github.com/IuriyG/job4j/blob/b4b6e6c3fe3da680feb7254db157c3ec6443ee7a/chapter_001/src/main/java/ru/job4j/condition/Greeting.java)
+* Математические операторы и составные операторы присваивания
 * Преобразование примитивных типов.
+* Символы в Java и их особенности.
 
 </details>
 
