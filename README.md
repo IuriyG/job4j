@@ -1,9 +1,8 @@
 [![Build Status](https://travis-ci.com/IuriyG/job4j.svg?branch=master)](https://travis-ci.org/IuriyG/job4j)
 [![jdk17](https://img.shields.io/badge/JDK-17-blue.svg)](http://jdk.java.net/17/)
 ![GitHub top language](https://img.shields.io/github/languages/top/IuriyG/job4j)
-![Lines of code](https://img.shields.io/tokei/lines/github/IUriyg/job4j)
-[![CodeFactor](https://www.codefactor.io/repository/github/iuriyg/codewars/badge)](https://www.codefactor.io/repository/github/iuriyg/job4j)
 [![codecov](https://codecov.io/gh/IuriyG/job4j/branch/master/graph/badge.svg)](https://codecov.io/gh/IuriyG/job4j)
+[![CodeFactor](https://www.codefactor.io/repository/github/iuriyg/job4j/badge)](https://www.codefactor.io/repository/github/iuriyg/job4j)
 
 # <font size="10" color="#03A9F4" face="Comic sans MS">[Job4j](https://job4j.ru "Обучение и трудоустройство Java-программистов от Junior до Senior.")</font>
 
